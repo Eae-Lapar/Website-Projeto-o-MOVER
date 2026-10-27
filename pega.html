@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="stylesheet" href="PEGA.css">
+  <title>Pega | Webpage</title>
+  <link rel="shortcut icon" href="imgs/logo-atu.png" type="image/x-icon">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="shortcut icon" href="imgs/Logo-Pega.jpg" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+Motor Computacional<body>
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        <img src="gifs/animacao-pega.gif" alt="Logo PEGA">
+        <span>PEGA</span>
+    </div>
+    <ul class="nav-links">
+        <li><a href="index.html"><i class="fa-solid fa-arrow-left"></i>Projeto O₃ Mover</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#funcionamento">Funcionamento</a></li>
+        <li><a href="#documentacao">Documentação</a></li>
+        <li><a href="#futuras-implementacoes">Futuras Implementações</a></li>
+        <li><a href="#equipe">Equipe</a></li>
+        <li><a href="#contato">Contato</a></li>
+    </ul>
+
+</nav>
+
+<!-- HERO -->
+<section id="hero" class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">
+            Software Científico para Estudos Atmosféricos
+        </span>
+
+        <h1>PEGA</h1>
+
+        <h2>
+            Plataforma de Estudos e Gestão Atmosférica
+        </h2>
+
+        <p>
+            Ferramenta desenvolvida para análise, modelagem e processamento
+            de dados atmosféricos, fornecendo suporte científico para pesquisas
+            sobre qualidade do ar, emissões e impactos ambientais.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#sobre" class="btn-primary">
+                Conhecer o Software
+            </a>
+
+            <a href="#documentacao" class="btn-secondary">
+                Ver Documentação
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-gif">
+
+        <img src="gifs/pega-acenandofeliz.gif"
+            alt="Modelo 3D do PEGA">
+
+    </div>
+
+</section>
+<section id="sobre" class="sobre">
+    <div class="sobre-linhas"></div>
+    <div class="sobre-container">
+
+        <!-- TEXTO -->
+        <div class="sobre-texto">
+
+            <span class="tag">Sobre o Software</span>
+
+            <h2>O que é o PEGA?</h2>
+
+            <p>
+                O PEGA (Plataforma de Estudos e Gestão Atmosférica) é um software científico
+                desenvolvido para análise, modelagem e processamento de dados atmosféricos.
+                Ele foi criado com o objetivo de apoiar pesquisas ambientais, permitindo
+                a interpretação avançada de dados relacionados à qualidade do ar e poluição atmosférica.
+            </p>
+
+            <p>
+                Seu principal objetivo científico é fornecer uma ferramenta computacional capaz de
+                transformar grandes volumes de dados atmosféricos em informações úteis para
+                universidades, pesquisadores e instituições ambientais.
+            </p>
+
+            <div class="sobre-destaques">
+
+                <div class="destaque">
+                    <h3>📊 Análise</h3>
+                    <p>Processamento avançado de dados atmosféricos.</p>
+                </div>
+
+                <div class="destaque">
+                    <h3>🌍 Ambiente</h3>
+                    <p>Foco em poluição e qualidade do ar.</p>
+                </div>
+
+                <div class="destaque">
+                    <h3>⚙️ Ciência</h3>
+                    <p>Baseado em métodos estatísticos e computacionais.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="sobre-visual">
+
+            <img src="gifs/globo-girando.gif" alt="PEGA Visual" class="sobre-gif">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="funcionamento" class="funcionamento">
+    <div class="func-particulas"></div>
+    <div class="funcionamento-header">
+
+        <span class="tag-func">Como Funciona</span>
+
+        <h2>Fluxo de Processamento do PEGA</h2>
+
+        <p>
+            O PEGA transforma dados atmosféricos brutos em informações científicas
+            através de um pipeline computacional baseado em análise estatística em R.
+        </p>
+
+    </div>
+
+    <div class="pipeline">
+        <div class="data-flow"></div>
+        <div class="data-flow delay1"></div>
+        <div class="data-flow delay2"></div>
+        <!-- ETAPA 1 -->
+        <div class="step">
+
+            <img src="imgs/processamento/entradadedados.jpg" alt="Sensores ambientais" class="step-img">
+
+            <h3>Entrada de Dados</h3>
+
+            <p>
+                Coleta de dados de sensores ambientais, estações meteorológicas e bancos de dados atmosféricos.
+            </p>
+
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="step">
+
+            <img src="imgs/processamento/processaemento.png" alt="Processamento em R" class="step-img">
+
+            <h3>Processamento em R</h3>
+
+            <p>
+                Aplicação de métodos estatísticos, limpeza de dados e modelagem computacional utilizando linguagem R.
+            </p>
+
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="step">
+
+            <img src="imgs/processamento/resultados.jpg" alt="Resultados e relatórios" class="step-img">
+
+            <h3>Resultados</h3>
+
+            <p>
+                Geração de gráficos, relatórios e insights científicos sobre qualidade do ar e poluição atmosférica.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="documentacao" class="documentacao">
+    <div class="doc-particulas"></div>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="doc-header">
+
+            <span class="tag-doc">
+                Documentação do Software
+            </span>
+
+            <h2>
+                Instalação, Execução e Estrutura de Uso
+            </h2>
+
+            <p>
+                Guia completo para instalação, configuração e utilização do PEGA
+                em ambientes acadêmicos e científicos.
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+        <div class="doc-grid">
+
+            <!-- CARD 1 -->
+            <div class="doc-card">
+                <h3>⚙️ Instalação</h3>
+                <p>
+                    Instale o R e o RStudio, configure os pacotes necessários
+                    como dplyr, ggplot2 e tidyr, e carregue o projeto no ambiente.
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="doc-card">
+                <h3>▶️ Execução</h3>
+                <p>
+                    Execute os scripts principais no RStudio para importar dados,
+                    processar informações e gerar análises automáticas.
+                </p>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="doc-card">
+                <h3>🧩 Estrutura</h3>
+                <p>
+                    O sistema é dividido em entrada de dados, processamento,
+                    motor científico e saída de resultados.
+                </p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="doc-card">
+                <h3>🧪 Observações</h3>
+                <p>
+                    Recomendado para uso acadêmico com grande volume de dados
+                    e máquinas com maior capacidade de processamento.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="equipe" class="equipe">
+    <div class="equipe-particulas"></div>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="equipe-header">
+
+            <span class="tag-equipe">
+                Equipe de Desenvolvimento
+            </span>
+
+            <h2>
+                Desenvolvedores, Pesquisadores e Responsáveis pelo PEGA
+            </h2>
+
+            <p>
+                Conheça os integrantes responsáveis pelo desenvolvimento científico,
+                computacional e acadêmico do projeto.
+            </p>
+
+        </div>
+
+        <!-- GRID DE MEMBROS -->
+        <div class="equipe-grid">
+
+            <!-- MEMBRO 1 -->
+            <div class="membro-card">
+
+                <img src="imgs/Pessoal/perfil-Sergio.jfif" alt="Membro da equipe">
+
+                <h3>Sergio Ibarra Espinosa</h3>
+
+                <span class="cargo">Desenvolvedor</span>
+
+                <p>
+                    Responsável pelo desenvolvimento do sistema, análise de dados
+                    atmosféricos e implementação dos modelos em R.
+                </p>
+
+                <!-- CONTATOS -->
+                <div class="contatos">
+
+                    <a href="#"><img src="imgs/logo-insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="imgs/logo-lattes.png" alt="Lattes"></a>
+                    <a href="#"><img src="imgs/email-logo-removebg-preview.png" alt="Email"></a>
+                    <a href="#"><img src="imgs/github-logo.png" alt="Git-Hub"></a>
+                </div>
+
+            </div>
+
+            <!-- MEMBRO 2 -->
+            <div class="membro-card">
+
+                <img src="imgs/Pessoal/perfil-Iara.jfif" alt="Membro da equipe">
+
+                <h3>Iara da Silva</h3>
+
+                <span class="cargo">Pós-Doc</span>
+
+                <p>
+                    Atua na análise científica dos dados ambientais e validação
+                    dos modelos atmosféricos utilizados no PEGA.
+                </p>
+
+                <div class="contatos">
+                    <a href="#"><img src="imgs/logo-insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="imgs/logo-lattes.png" alt="Lattes"></a>
+                    <a href="#"><img src="imgs/email-logo-removebg-preview.png" alt="Email"></a>
+                    <a href="#"><img src="imgs/github-logo.png" alt="Git-Hub"></a>
+                </div>
+
+            </div>
+
+            <!-- MEMBRO 3 -->
+            <div class="membro-card">
+
+                <img src="imgs/Pessoal/perfil-JP.jfif" alt="Membro da equipe">
+
+                <h3>João Pedro Magri</h3>
+
+                <span class="cargo">Iniciação Ciêntifica (IC)</span>
+
+                <p>
+                    Responsável pela supervisão científica do projeto e validação
+                    dos métodos estatísticos aplicados.
+                </p>
+
+                <div class="contatos">
+                    <a href="#"><img src="imgs/logo-insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="imgs/logo-lattes.png" alt="Lattes"></a>
+                    <a href="#"><img src="imgs/email-logo-removebg-preview.png" alt="Email"></a>
+                    <a href="#"><img src="imgs/github-logo.png" alt="Git-Hub"></a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<section id="futuras-implementacoes" class="futuras">
+    <div class="futuras-particulas"></div>
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="futuras-header">
+
+            <span class="tag-futuras">
+                Futuras Implementações
+            </span>
+
+            <h2>
+                Melhorias e Expansão do PEGA
+            </h2>
+
+            <p>
+                Planejamento de novas funcionalidades e evolução do sistema para ampliar
+                sua capacidade científica e computacional.
+            </p>
+
+        </div>
+
+        <!-- GRID -->
+        <div class="futuras-grid">
+
+            <div class="futura-card">
+                <h3>🤖 Inteligência Artificial</h3>
+                <p>
+                    Implementação de modelos de IA para previsão de padrões atmosféricos
+                    e detecção automática de anomalias ambientais.
+                </p>
+            </div>
+
+            <div class="futura-card">
+                <h3>🌐 Dados em Tempo Real</h3>
+                <p>
+                    Integração com sensores e APIs ambientais para análise contínua
+                    de dados atmosféricos em tempo real.
+                </p>
+            </div>
+
+            <div class="futura-card">
+                <h3>📊 Dashboard Interativo</h3>
+                <p>
+                    Criação de painéis dinâmicos para visualização científica
+                    com gráficos interativos e mapas ambientais.
+                </p>
+            </div>
+
+            <div class="futura-card">
+                <h3>☁️ Cloud Computing</h3>
+                <p>
+                    Migração do processamento para ambientes em nuvem,
+                    permitindo maior escalabilidade e desempenho.
+                </p>
+            </div>
+
+            <div class="futura-card">
+                <h3>📡 Integração Global</h3>
+                <p>
+                    Conexão com bases de dados internacionais para ampliar
+                    a análise atmosférica global.
+                </p>
+            </div>
+
+            <div class="futura-card">
+                <h3>🔬 Modelos Avançados</h3>
+                <p>
+                    Desenvolvimento de novos modelos matemáticos para simulação
+                    mais precisa da atmosfera.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="contato" class="contato">
+    <div class="contato-particulas"></div>
+    <div class="container">
+
+        <div class="contato-header">
+
+            <span class="tag-contato">
+                Contato & Repositório
+            </span>
+
+            <h2>
+                Entre em Contato com a Equipe
+            </h2>
+
+            <p>
+                Acesse o código-fonte, acompanhe o desenvolvimento do projeto
+                e entre em contato com os pesquisadores responsáveis pelo PEGA.
+            </p>
+
+        </div>
+
+        <div class="contato-grid">
+
+            <!-- GitHub -->
+            <div class="contato-card">
+
+                <img src="imgs/github-logo.png" alt="GitHub">
+
+                <h3>GitHub</h3>
+
+                <p>
+                    Repositório oficial contendo código-fonte,
+                    documentação e atualizações do projeto.
+                </p>
+
+                <a href="#" target="_blank" class="btn-contato">
+                    Acessar Repositório
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ==========================
+   FOOTER
+========================== -->
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <!-- LOGO -->
+        <div class="footer-col">
+
+            <div class="footer-logo">
+                <img src="gifs/pega-acenandofeliz.gif" alt="Logo PEGA">
+                <span>PEGA</span>
+            </div>
+
+            <p>
+                Plataforma de Estudos e Gestão Atmosférica desenvolvida
+                para apoiar pesquisas científicas, análise ambiental
+                e processamento de dados atmosféricos.
+            </p>
+
+        </div>
+
+        <!-- LINKS -->
+        <div class="footer-col">
+
+            <h3>Navegação</h3>
+
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#funcionamento">Funcionamento</a></li>
+                <li><a href="#documentacao">Documentação</a></li>
+            </ul>
+
+        </div>
+
+        <!-- PROJETO -->
+        <div class="footer-col">
+
+            <h3>Projeto</h3>
+
+            <ul>
+                <li><a href="#futuras-implementacoes">Futuras Implementações</a></li>
+                <li><a href="#equipe">Equipe</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+
+        </div>
+
+        <!-- REDES -->
+        <div class="footer-col">
+
+            <h3>Links Úteis</h3>
+
+            <div class="footer-social">
+
+                <a href="#">
+                    <img src="imgs/github-logo.png" alt="GitHub">
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+
+        <!-- COPYRIGHT -->
+        <p class="footer-copy">
+        © 2026 Projeto Ozônio |
+        Site desenvolvido por
+        <span class="nome-dev">João Pedro Magri</span>
+        </p>
+
+    </div>
+
+</footer>
+<script>
+const tooltip = document.getElementById("codeTooltip");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+document.querySelectorAll(".code-card .kw, .code-card .fn").forEach(el => {
+
+el.addEventListener("mousemove", (e) => {
+tooltip.style.display = "block";
+tooltip.style.left = (e.clientX + 15) + "px";
+tooltip.style.top = (e.clientY + 15) + "px";
+tooltip.innerText = el.dataset.info;
+});
+
+el.addEventListener("mouseleave", () => {
+tooltip.style.display = "none";
+});
+
+});
+
+});
+/* ================= CARROSSEL 3D ================= */
+
+const cards = document.querySelectorAll(".galeria-card");
+const prevBtn = document.querySelector(".prev");
+const nextBtn = document.querySelector(".next");
+
+let current = 0;
+
+/* POSIÇÕES */
+
+function updateCarousel(){
+
+  cards.forEach(card => {
+    card.classList.remove("active", "left", "right");
+  });
+
+  const prev =
+    (current - 1 + cards.length) % cards.length;
+
+  const next =
+    (current + 1) % cards.length;
+
+  cards[current].classList.add("active");
+  cards[prev].classList.add("left");
+  cards[next].classList.add("right");
+
+}
+
+/* BOTÃO DIREITA */
+
+nextBtn.addEventListener("click", () => {
+
+  current =
+    (current + 1) % cards.length;
+
+  updateCarousel();
+
+});
+
+/* BOTÃO ESQUERDA */
+
+prevBtn.addEventListener("click", () => {
+
+  current =
+    (current - 1 + cards.length) % cards.length;
+
+  updateCarousel();
+
+});
+
+/* INICIAR */
+
+updateCarousel();
+</script>
+</body>
+</html>
