@@ -5341,3 +5341,50 @@ and (max-width: 1023px) {
     }
 
 }
+
+/* ================================================
+   OBJETIVOS - LAYOUT HORIZONTAL NO COMPUTADOR
+   Mantém texto à esquerda e vídeo à direita
+================================================ */
+
+@media screen and (min-width: 768px) {
+
+    .objetivo .objetivo-topo {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: clamp(20px, 4vw, 60px);
+        width: 100%;
+    }
+
+    .objetivo .objetivo-info {
+        display: block;
+        min-width: 0;
+    }
+
+    .objetivo .objetivo-info h3 {
+        font-size: clamp(1.5rem, 2.3vw, 2.2rem);
+        line-height: 1.3;
+    }
+
+    .objetivo .objetivo-info p {
+        font-size: clamp(0.9rem, 1.1vw, 1.05rem);
+        line-height: 1.8;
+        text-align: justify;
+    }
+
+    .objetivo .objetivo-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 0;
+    }
+
+    .objetivo .objetivo-img video {
+        width: 100%;
+        max-width: 520px;
+        height: auto;
+        border-radius: 12px;
+    }
+}
+
