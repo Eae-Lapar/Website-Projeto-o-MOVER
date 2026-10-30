@@ -65,10 +65,15 @@
       </video>
 
   </div>
-  <nav class="navbar">
+<!-- ==========================================
+     MENU DE NAVEGAÇÃO
+========================================== -->
 
-      <!-- MENU -->
-      <ul class="nav-links">
+<nav class="navbar">
+
+    <!-- MENU PRINCIPAL - COMPUTADOR -->
+
+    <ul class="nav-links" id="menu-principal">
 
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#objetivo">Objetivo</a></li>
@@ -77,39 +82,43 @@
         <li><a href="#galeria">Galeria</a></li>
         <li><a href="#parceiros">Instituições</a></li>
 
-      </ul>
+    </ul>
 
+    <!-- BOTÃO DE SOFTWARES -->
 
-      <!-- DIREITA -->
-      <div class="top-actions">
+    <div class="top-actions">
 
+        <div class="dropdown" id="dropdown-softwares">
 
-        <!-- DROPDOWN SOFTWARE -->
-    <!--<div class="dropdown">
+            <button
+                type="button"
+                class="software-link"
+                id="botao-softwares"
+                aria-expanded="false"
+                aria-controls="lista-softwares"
+            >
+                Softwares ▾
+            </button>
 
-          <a href="#" class="software-link">
-            Softwares ▾
-          </a>
+            <!-- LISTA DE SOFTWARES -->
 
+            <ul class="dropdown-menu" id="lista-softwares">
 
-          <ul class="dropdown-menu">
+                <li>
+                    <a href="pega.html">PEGA</a>
+                </li>
 
-            <li>
-              <a href="pega.html">PEGA</a>
-            </li>
+                <li>
+                    <a href="pega.html">Outro</a>
+                </li>
 
-            <li>
-              <a href="pega.html">Outro</a>
-            </li>
-          </ul>
+            </ul>
 
-        </div>-->
+        </div>
 
+    </div>
 
-      </div>
-
-
-  </nav>
+</nav>
 
   <!-- ================= HERO CONTENT ================= -->
   <div class="hero-container">
@@ -965,7 +974,7 @@ contribuir para a formação de recursos humanos na área.</p>
 
           <div class="integrante-img">
 
-            <img src="imgs/Pessoal/sergioIbarra.jpg" alt="Sergio Ibarra">
+            <img src="imgs/Pessoal/perfil-Sergio.jpg" alt="Sergio Ibarra">
 
             <span class="cargo ic">
               BPD2
@@ -3371,6 +3380,56 @@ if (prevBtn) {
   );
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const dropdown = document.getElementById("dropdown-softwares");
+    const botao = document.getElementById("botao-softwares");
+
+    if (!dropdown || !botao) return;
+
+    // ABRIR E FECHAR
+
+    botao.addEventListener("click", (event) => {
+
+        event.stopPropagation();
+
+        const aberto = dropdown.classList.toggle("aberto");
+
+        botao.setAttribute("aria-expanded", String(aberto));
+
+    });
+
+    // FECHAR AO CLICAR FORA
+
+    document.addEventListener("click", (event) => {
+
+        if (!dropdown.contains(event.target)) {
+
+            dropdown.classList.remove("aberto");
+            botao.setAttribute("aria-expanded", "false");
+
+        }
+
+    });
+
+    // FECHAR COM ESC
+
+    document.addEventListener("keydown", (event) => {
+
+        if (event.key === "Escape") {
+
+            dropdown.classList.remove("aberto");
+            botao.setAttribute("aria-expanded", "false");
+
+            botao.focus();
+
+        }
+
+    });
+
+});
+
 document.addEventListener("DOMContentLoaded", () => {
 
     const videos = document.querySelectorAll(".hero-video");
