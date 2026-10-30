@@ -2425,25 +2425,23 @@ max-width:100%;
 
 /* ================= HERO ================= */
 
-.hero{
-min-height:100vh;
-padding:25px 7%;
+.hero {
+    min-height: 100vh;
+    padding: 25px 7%;
 
-background:
-linear-gradient(
-rgba(2,6,23,0.84),
-rgba(2,6,23,0.96)
-),
-url("img-fundo/fundo-header.jpg");
+    background: linear-gradient(
+        rgba(2, 6, 23, 0.84),
+        rgba(2, 6, 23, 0.96)
+    );
 
-background-size:cover;
-background-position:center;
+    background-size: cover;
+    background-position: center;
 
-position:relative;
-overflow:hidden;
+    position: relative;
+    overflow: hidden;
 
-display:flex;
-flex-direction:column;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ================= NAVBAR ================= */
@@ -3560,215 +3558,594 @@ width:100%;
 
 }
 
-
 /* =========================================================
-   OBJETIVO
+   OBJETIVOS DO PROJETO - CSS COMPLETO
 ========================================================= */
 
-.objetivo{
-  padding:120px 8%;
-  background:var(--bg-secondary);
-}
-
 /* =========================================================
-   TÍTULO
+   1. SEÇÃO PRINCIPAL
 ========================================================= */
 
-.titulo-objetivo{
-  width:100%;
-
-  display:flex;
-  flex-direction:column;
-
-  align-items:center;
-  justify-content:center;
-
-  text-align:center;
-
-  margin-bottom:70px;
-}
-.titulo-objetivo .tag-sobre{
-  display:block;
-
-  margin-bottom:18px;
+.objetivo {
+    padding: 120px 8%;
+    background: var(--bg-secondary);
 }
 
-.titulo-objetivo h2{
-  font-size:3rem;
-  color:white;
+.objetivo,
+.objetivo * {
+    box-sizing: border-box;
 }
 
 /* =========================================================
-   BLOCO TEXTO + GIF
+   2. TÍTULO
 ========================================================= */
 
-.objetivo-topo{
-  width:100%;
+.objetivo .titulo-objetivo {
+    width: 100%;
 
-  display:grid;
-  grid-template-columns:1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  gap:60px;
-
-  align-items:center;
-
-  margin-bottom:60px;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
-/* TEXTO */
-
-.objetivo-info h3{
-  font-size:2.2rem;
-  color:white;
-
-  margin-bottom:25px;
+.objetivo .titulo-objetivo .tag-sobre {
+    display: block;
+    margin-bottom: 18px;
 }
 
-.objetivo-info p{
-  font-size:1.05rem;
-  line-height:1.9;
+.objetivo .titulo-objetivo h2 {
+    margin: 0;
 
-  color:var(--text-secondary);
+    font-size: 3rem;
+    line-height: 1.2;
+    color: white;
 }
 
-/* GIF */
+/* =========================================================
+   3. TEXTO + VÍDEO
+========================================================= */
 
-.objetivo-img video {
+.objetivo .objetivo-topo {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 1fr);
+
+    gap: 60px;
+    align-items: center;
+
+    margin-bottom: 60px;
+}
+
+.objetivo .objetivo-info {
+    min-width: 0;
+}
+
+.objetivo .objetivo-info h3 {
+    margin: 0 0 25px;
+
+    font-size: 2.2rem;
+    line-height: 1.3;
+    color: white;
+}
+
+.objetivo .objetivo-info p {
+    margin: 0;
+
+    font-size: 1.05rem;
+    line-height: 1.9;
+
+    color: var(--text-secondary);
+
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.objetivo .objetivo-img {
+    min-width: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.objetivo .objetivo-img video {
+    display: block;
+
     width: 100%;
     max-width: 520px;
     height: auto;
 
-    display: block;
     object-fit: contain;
-
     border-radius: 12px;
 }
 
 /* =========================================================
-   CARDS
+   4. CARDS - COMPUTADOR
 ========================================================= */
 
-.objetivo-topicos{
-  width:100%;
+.objetivo .objetivo-topicos {
+    width: 100%;
 
-  display:grid;
+    display: grid;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-  grid-template-columns:1fr 1fr;
+    align-items: start;
 
-  gap:25px;
+    gap: 25px;
 }
 
 /* COLUNAS */
 
-.coluna-topicos{
-  display:flex;
-  flex-direction:column;
+.objetivo .coluna-topicos {
+    display: flex;
+    flex-direction: column;
 
-  gap:25px;
+    min-width: 0;
+    gap: 25px;
 }
 
-/* CARD */
+/* CARDS */
 
-.topico{
-  display:flex;
-  align-items:center;
+.objetivo .topico {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 
-  gap:18px;
+    width: 100%;
+    min-width: 0;
+    min-height: 110px;
+    height: auto;
 
-  padding:24px;
+    gap: 18px;
+    padding: 24px;
 
-  min-height:110px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 22px;
 
-  background:var(--bg-card);
+    backdrop-filter: blur(10px);
 
-  border:1px solid var(--border-color);
-
-  border-radius:22px;
-
-  backdrop-filter:blur(10px);
-
-  transition:var(--transition);
-
-  box-shadow:var(--shadow-main);
+    box-shadow: var(--shadow-main);
+    transition: var(--transition);
 }
 
-.topico:hover{
-  transform:translateY(-6px);
+.objetivo .topico:hover {
+    transform: translateY(-6px);
 
-  border-color:rgba(100,255,218,0.3);
-
-  box-shadow:var(--shadow-hover);
+    border-color: rgba(100, 255, 218, 0.3);
+    box-shadow: var(--shadow-hover);
 }
 
-/* NÚMERO */
+/* NÚMEROS */
 
-.topico span{
-  width:62px;
-  height:62px;
+.objetivo .topico span {
+    flex: 0 0 62px;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  border-radius:18px;
+    width: 62px;
+    height: 62px;
 
-  background:
-  linear-gradient(
-    135deg,
-    var(--color-blue),
-    var(--color-main)
-  );
+    border-radius: 18px;
 
-  color:#06101d;
+    background: linear-gradient(
+        135deg,
+        var(--color-blue),
+        var(--color-main)
+    );
 
-  font-weight:700;
-  font-size:1.1rem;
+    color: #06101d;
 
-  flex-shrink:0;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1;
 }
 
-/* TEXTO */
+/* TEXTOS DOS CARDS */
 
-.topico p{
-  margin:0;
+.objetivo .topico p {
+    flex: 1;
+    min-width: 0;
 
-  color:var(--text-secondary);
+    margin: 0;
 
-  line-height:1.6;
+    color: var(--text-secondary);
+
+    font-size: 1rem;
+    line-height: 1.6;
+
+    text-align: justify;
+    text-justify: inter-word;
+
+    overflow-wrap: break-word;
 }
-/* =========================================================*/
-   /*CARD 05 - CENTRALIZADO E LARGURA TOTAL*/
-.coluna-topicos:first-child .topico:nth-child(3){
-  grid-column: 1 / -1;
+
+/* CARD 05 - LARGURA TOTAL */
+
+.objetivo .topico-05 {
+    grid-column: 1 / -1;
+
+    width: 100%;
+    max-width: 100%;
 }
+
 /* =========================================================
-   CARD 05 - OCUPA TODA A LARGURA
+   5. TELAS INTERMEDIÁRIAS E ZOOM
+   768px ATÉ 1100px
 ========================================================= */
 
-.topico-05{
-  grid-column:1 / -1;
+@media screen and (min-width: 768px) and (max-width: 1100px) {
+
+    .objetivo {
+        padding: 75px 6%;
+    }
+
+    .objetivo .titulo-objetivo {
+        margin-bottom: 40px;
+    }
+
+    .objetivo .titulo-objetivo h2 {
+        font-size: 2.3rem;
+    }
+
+    /* TEXTO E VÍDEO */
+
+    .objetivo .objetivo-topo {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+        margin-bottom: 40px;
+    }
+
+    .objetivo .objetivo-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .objetivo .objetivo-img video {
+        max-width: 420px;
+    }
+
+    /* CARDS EM UMA COLUNA */
+
+    .objetivo .objetivo-topicos {
+        display: flex;
+        flex-direction: column;
+
+        gap: 14px;
+    }
+
+    /* LIBERA OS CARDS DAS COLUNAS DO HTML */
+
+    .objetivo .coluna-topicos {
+        display: contents;
+    }
+
+    .objetivo .topico,
+    .objetivo .topico-05 {
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        height: auto;
+
+        padding: 16px 20px;
+        gap: 16px;
+    }
+
+    .objetivo .topico span {
+        flex-basis: 48px;
+
+        width: 48px;
+        height: 48px;
+
+        border-radius: 13px;
+    }
+
+    .objetivo .topico p {
+        font-size: 0.95rem;
+        line-height: 1.55;
+    }
 }
+
 /* =========================================================
-   RESPONSIVO
+   6. CELULARES - ATÉ 767px
 ========================================================= */
 
-@media(max-width:980px){
+@media screen and (max-width: 767px) {
 
-  .objetivo-topo{
-    grid-template-columns:1fr;
+    /* SEÇÃO */
 
-    text-align:center;
-  }
+    .objetivo {
+        padding: 45px 0;
+    }
 
-  .objetivo-topicos{
-    grid-template-columns:1fr;
-  }
+    .objetivo .container {
+        width: 92%;
+        max-width: 100%;
 
-  .titulo-objetivo h2{
-    font-size:2.3rem;
-  }
+        margin: 0 auto;
+    }
 
+    /* TÍTULO PRINCIPAL */
+
+    .objetivo .titulo-objetivo {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+
+    .objetivo .titulo-objetivo .tag-sobre {
+        margin-bottom: 10px;
+    }
+
+    .objetivo .titulo-objetivo h2 {
+        font-size: 1.45rem;
+        line-height: 1.25;
+    }
+
+    /* =====================================
+       TÍTULO SECUNDÁRIO AO LADO DO VÍDEO
+       DESCRIÇÃO ABAIXO
+    ===================================== */
+
+    .objetivo .objetivo-topo {
+        display: grid;
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(0, 1fr);
+
+        grid-template-areas:
+            "titulo video"
+            "descricao descricao";
+
+        align-items: center;
+
+        column-gap: 12px;
+        row-gap: 12px;
+
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .objetivo .objetivo-info {
+        display: contents;
+    }
+
+    /* TÍTULO SECUNDÁRIO */
+
+    .objetivo .objetivo-info h3 {
+        grid-area: titulo;
+
+        margin: 0;
+
+        font-size: clamp(0.98rem, 4.2vw, 1.2rem);
+        line-height: 1.3;
+
+        text-align: left;
+    }
+
+    /* DESCRIÇÃO */
+
+    .objetivo .objetivo-info p {
+        grid-area: descricao;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        font-size: 0.84rem;
+        line-height: 1.55;
+
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    /* VÍDEO */
+
+    .objetivo .objetivo-img {
+        grid-area: video;
+
+        width: 100%;
+        min-width: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        overflow: hidden;
+    }
+
+    .objetivo .objetivo-img video {
+        display: block;
+
+        width: 100%;
+        max-width: 190px;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    /* =====================================
+       CARDS COMPACTOS
+    ===================================== */
+
+    .objetivo .objetivo-topicos {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+
+        gap: 9px;
+        margin: 15px 0 0;
+        padding: 0;
+    }
+
+    .objetivo .coluna-topicos {
+        display: contents;
+    }
+
+    .objetivo .topico,
+    .objetivo .topico-05 {
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+        min-width: 0;
+        min-height: 0;
+        height: auto;
+
+        margin: 0;
+        padding: 11px 12px;
+
+        gap: 11px;
+
+        border-radius: 11px;
+    }
+
+    /* NÚMEROS */
+
+    .objetivo .topico span {
+        flex: 0 0 34px;
+
+        width: 34px;
+        height: 34px;
+
+        font-size: 0.85rem;
+        border-radius: 8px;
+    }
+
+    /* TEXTOS */
+
+    .objetivo .topico p {
+        flex: 1;
+        min-width: 0;
+
+        margin: 0;
+
+        font-size: 0.78rem;
+        line-height: 1.45;
+
+        text-align: justify;
+        text-justify: inter-word;
+
+        overflow-wrap: break-word;
+    }
 }
+
+/* =========================================================
+   7. ORDEM VISUAL DOS CARDS - 01, 02, 03, 04, 05
+   TELAS ATÉ 1100px
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+    .objetivo .coluna-topicos:first-child
+    .topico:first-child {
+        order: 1;
+    }
+
+    .objetivo .coluna-topicos:nth-child(2)
+    .topico:first-child {
+        order: 2;
+    }
+
+    .objetivo .coluna-topicos:first-child
+    .topico:nth-child(2) {
+        order: 3;
+    }
+
+    .objetivo .coluna-topicos:nth-child(2)
+    .topico:nth-child(2) {
+        order: 4;
+    }
+
+    .objetivo .topico-05 {
+        order: 5;
+    }
+}
+
+/* =========================================================
+   8. CELULARES PEQUENOS - ATÉ 360px
+========================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .objetivo {
+        padding: 35px 0;
+    }
+
+    .objetivo .container {
+        width: 94%;
+    }
+
+    /* TÍTULOS */
+
+    .objetivo .titulo-objetivo h2 {
+        font-size: 1.3rem;
+    }
+
+    .objetivo .objetivo-topo {
+        column-gap: 8px;
+        row-gap: 10px;
+    }
+
+    .objetivo .objetivo-info h3 {
+        font-size: 0.95rem;
+        line-height: 1.25;
+    }
+
+    .objetivo .objetivo-info p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    .objetivo .objetivo-img video {
+        max-width: 155px;
+    }
+
+    /* CARDS */
+
+    .objetivo .objetivo-topicos {
+        gap: 8px;
+    }
+
+    .objetivo .topico,
+    .objetivo .topico-05 {
+        padding: 9px 10px;
+        gap: 9px;
+
+        border-radius: 10px;
+    }
+
+    .objetivo .topico span {
+        flex-basis: 30px;
+
+        width: 30px;
+        height: 30px;
+
+        font-size: 0.78rem;
+    }
+
+    .objetivo .topico p {
+        font-size: 0.74rem;
+        line-height: 1.4;
+    }
+}
+
+
 /* ================= GALERIA ================= */
 
 .galeria{
@@ -4307,5 +4684,660 @@ width:100%;
     height:55px;
     font-size:1.2rem;
   }
+
+}/* =================================================
+   RESPONSIVIDADE - PROJETO O3 MOVER
+   CELULARES - ATÉ 767px
+================================================= */
+
+/* BOTÃO HAMBÚRGUER OCULTO NO DESKTOP */
+
+.menu-toggle {
+    display: none;
+}
+
+/* =================================================
+   RESPONSIVIDADE - PROJETO O3 MOVER
+   CELULAR E TABLET
+================================================= */
+
+/* BOTÃO HAMBÚRGUER DESATIVADO EM TODAS AS TELAS */
+
+.menu-toggle {
+    display: none !important;
+}
+
+/* ==========================================
+   CELULAR E TABLET PEQUENO
+   SOMENTE BOTÃO DE SOFTWARES
+========================================== */
+
+@media screen and (max-width: 1023px) {
+
+    .hero .navbar {
+        display: flex !important;
+
+        position: absolute;
+        top: 15px;
+        right: 5%;
+        left: auto;
+
+        width: auto;
+        height: auto;
+
+        margin: 0;
+        padding: 0;
+
+        justify-content: flex-end;
+        align-items: center;
+
+        background: transparent;
+        z-index: 1000;
+    }
+
+    /* ESCONDE APENAS O MENU PRINCIPAL */
+
+    .hero .nav-links {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+    /* ÁREA DO BOTÃO DE SOFTWARES */
+
+    .hero .top-actions {
+        display: flex;
+        position: relative;
+
+        width: auto;
+        margin: 0;
+        padding: 0;
+
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .hero .dropdown {
+        position: relative;
+    }
+
+    /* BOTÃO COMPACTO */
+
+    .hero .software-link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: auto;
+        min-width: 105px;
+        height: 38px;
+
+        padding: 0 14px;
+
+        background: rgba(7, 18, 35, 0.95);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 10px;
+
+        color: #ffffff;
+        font-size: 0.78rem;
+        font-weight: 600;
+
+        text-align: center;
+        text-decoration: none;
+
+        cursor: pointer;
+    }
+
+    /* CAIXA DOS SOFTWARES */
+
+    .hero .dropdown-menu {
+        display: none;
+
+        position: absolute;
+        top: calc(100% + 8px);
+        right: 0;
+        left: auto;
+
+        width: 190px;
+        max-width: calc(100vw - 30px);
+
+        margin: 0;
+        padding: 6px;
+
+        list-style: none;
+
+        background: rgba(7, 18, 35, 0.98);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: 12px;
+
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+
+        z-index: 1001;
+    }
+
+    /* ABERTURA POR CLIQUE */
+
+    .hero .dropdown.aberto .dropdown-menu {
+        display: block;
+    }
+
+    /* LINKS DOS SOFTWARES */
+
+    .hero .dropdown-menu li a {
+        display: block;
+
+        padding: 11px 12px;
+
+        color: #ffffff;
+        background: transparent;
+
+        font-size: 0.82rem;
+        font-weight: 500;
+
+        text-align: left;
+        text-decoration: none;
+
+        border-radius: 8px;
+    }
+
+    .hero .dropdown-menu li a:hover,
+    .hero .dropdown-menu li a:focus-visible {
+        background: rgba(56, 189, 248, 0.15);
+        color: #38bdf8;
+    }
+
+    /* EVITA ABERTURA AUTOMÁTICA POR TOQUE/HOVER */
+
+    .hero .dropdown:not(.aberto):hover .dropdown-menu {
+        display: none;
+    }
+
+}
+
+
+/* =================================================
+   RESPONSIVIDADE - CELULAR ATÉ 767px
+================================================= */
+
+@media screen and (max-width: 767px) {
+
+    /* ==========================================
+       CONFIGURAÇÕES GERAIS
+    ========================================== */
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+    }
+
+    /* ==========================================
+       HERO - CABEÇALHO
+    ========================================== */
+
+    .hero {
+        position: relative;
+        isolation: isolate;
+
+        width: 100%;
+        min-height: 100svh;
+        height: auto;
+
+        padding: 55px 5% 45px;
+
+        display: flex;
+        flex-direction: column;
+
+        overflow: hidden;
+    }
+
+    /* ==========================================
+       VÍDEOS DE FUNDO
+       MANTIDO O ENQUADRAMENTO APROVADO
+    ========================================== */
+
+    .hero-videos {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        overflow: hidden;
+        background: #071426;
+
+        z-index: -1;
+    }
+
+    .hero-video {
+        position: absolute;
+        inset: 0;
+
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+        object-position: center;
+
+        transform: none;
+    }
+
+    .hero-video.ativo {
+        object-fit: cover;
+        object-position: center;
+        transform: none;
+    }
+
+    /* ==========================================
+       CONTEÚDO PRINCIPAL
+    ========================================== */
+
+    .hero-container {
+        position: relative;
+        z-index: 2;
+
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0 auto;
+        padding: 20px 0 0;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 20px;
+
+        text-align: center;
+    }
+
+    /* ==========================================
+       LOGO E TÍTULO
+    ========================================== */
+
+    .hero-title {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 12px;
+
+        margin: 0 0 10px;
+    }
+
+    .hero-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-logo img {
+        display: block;
+
+        width: 85px;
+        height: auto;
+        max-width: 100%;
+
+        object-fit: contain;
+    }
+
+    .hero-title h1 {
+        margin: 0;
+
+        font-size: clamp(1.7rem, 7vw, 2.3rem);
+        line-height: 1.2;
+
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    /* ==========================================
+       DESCRIÇÃO
+    ========================================== */
+
+    .hero .typing-text {
+        width: 100%;
+        max-width: 350px;
+
+        margin: 10px auto 15px;
+
+        font-size: 0.95rem;
+        line-height: 1.65;
+
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    /* ==========================================
+       BOTÕES PRINCIPAIS
+       EXPLORAR PROJETO / VER PRODUÇÕES
+    ========================================== */
+
+    .hero-buttons {
+        width: 100%;
+        max-width: 350px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: stretch;
+        gap: 12px;
+
+        margin: 10px auto 0;
+    }
+
+    .hero-buttons a {
+        display: flex;
+
+        align-items: center;
+        justify-content: center;
+
+        width: 100%;
+        min-height: 48px;
+
+        padding: 13px 18px;
+
+        font-size: 0.95rem;
+        font-weight: 600;
+
+        text-align: center;
+        text-decoration: none;
+
+        border-radius: 12px;
+    }
+
+    /* ==========================================
+       CARDS DE INDICADORES
+       DUAS COLUNAS
+    ========================================== */
+
+    .hero-stats {
+        width: 100%;
+        max-width: 420px;
+
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 12px;
+
+        margin: 20px auto 0;
+        padding: 0;
+    }
+
+    .hero-stat {
+        width: 100%;
+        min-width: 0;
+
+        min-height: 120px;
+        height: auto;
+
+        padding: 18px 8px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 8px;
+
+        border-radius: 15px;
+
+        text-align: center;
+    }
+
+    .hero-stat h3 {
+        margin: 0;
+
+        font-size: 2rem;
+        line-height: 1.1;
+
+        color: #36c5f4;
+    }
+
+    .hero-stat p {
+        margin: 0;
+
+        font-size: 0.78rem;
+        line-height: 1.4;
+
+        text-align: center;
+    }
+
+}
+
+/* =================================================
+   CELULARES MUITO PEQUENOS - ATÉ 360px
+================================================= */
+
+@media screen and (max-width: 360px) {
+
+    .hero {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .hero-title h1 {
+        font-size: 1.65rem;
+    }
+
+    .hero-stats {
+        gap: 8px;
+    }
+
+    .hero-stat {
+        min-height: 110px;
+        padding: 12px 5px;
+    }
+
+    .hero-stat h3 {
+        font-size: 1.75rem;
+    }
+
+    .hero-stat p {
+        font-size: 0.72rem;
+    }
+
+}
+
+/* =================================================
+   TABLETS PEQUENOS - 768px A 1023px
+================================================= */
+
+@media screen and (min-width: 768px)
+and (max-width: 1023px) {
+
+    .hero {
+        min-height: 100svh;
+        padding: 65px 6% 55px;
+    }
+
+    .hero-container {
+        width: 100%;
+        max-width: 850px;
+        margin: 0 auto;
+    }
+
+    .hero-title h1 {
+        font-size: clamp(2.3rem, 5vw, 3.2rem);
+        text-align: center;
+    }
+
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: 18px;
+        max-width: 650px;
+        margin: 25px auto 0;
+    }
+
+    .hero-stat {
+        min-width: 0;
+        height: auto;
+        min-height: 140px;
+    }
+
+}
+
+/* =================================================
+   TABLETS GRANDES E COMPUTADORES
+   A PARTIR DE 1024px
+================================================= */
+
+@media screen and (min-width: 1024px) {
+
+    .hero .navbar {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: none !important;
+    }
+
+}
+/* ==========================================
+   EFEITO DE DIGITAÇÃO ESTÁVEL
+   CURSOR ACOMPANHANDO O TEXTO
+========================================== */
+
+.hero .typing-text {
+    min-height: 120px;
+
+    display: block;
+
+    align-content: center;
+
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* CELULARES */
+
+@media screen and (max-width: 767px) {
+
+    .hero .typing-text {
+        width: 100%;
+        max-width: 350px;
+
+        height: 170px;
+        min-height: 170px;
+
+        margin: 10px auto 15px;
+
+        display: block;
+        align-content: center;
+
+        font-size: 0.95rem;
+        line-height: 1.65;
+
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+}
+
+/* TABLETS */
+
+@media screen and (min-width: 768px)
+and (max-width: 1023px) {
+
+    .hero .typing-text {
+        min-height: 140px;
+        display: block;
+        align-content: center;
+    }
+
+}
+
+/* ==========================================
+   DROPDOWN SOFTWARES - ABERTURA POR CLIQUE
+========================================== */
+
+.dropdown.aberto .dropdown-menu {
+    display: block;
+}
+
+/* CELULAR E TABLET PEQUENO */
+
+@media screen and (max-width: 1023px) {
+
+    .hero .dropdown:not(.aberto) .dropdown-menu,
+    .hero .dropdown:not(.aberto):hover .dropdown-menu {
+        display: none;
+    }
+
+    .hero .dropdown.aberto .dropdown-menu {
+        display: block;
+    }
+
+    .hero .software-link {
+        font-family: inherit;
+        line-height: 1;
+    }
+
+}
+
+/* ==========================================
+   TÍTULOS MENORES EM TODO O SITE
+   SOMENTE CELULARES
+========================================== */
+
+@media screen and (max-width: 767px) {
+
+    /* TÍTULOS PRINCIPAIS DAS SEÇÕES */
+
+    section h2,
+    .objetivo .titulo-objetivo h2,
+    .equipe h2,
+    .titulo-equipe h2 {
+        font-size: 1.45rem !important;
+        line-height: 1.2 !important;
+    }
+
+    /* SUBTÍTULOS */
+
+    section h3 {
+        font-size: 1rem !important;
+        line-height: 1.3 !important;
+    }
+
+    /* TAGS COM BORDA */
+
+    section [class^="tag-"],
+    section [class*=" tag-"] {
+        font-size: 0.62rem !important;
+        padding: 5px 10px !important;
+        letter-spacing: 0.4px !important;
+    }
+
+}
+
+/* CELULARES PEQUENOS */
+
+@media screen and (max-width: 360px) {
+
+    section h2 {
+        font-size: 1.3rem !important;
+    }
+
+    section h3 {
+        font-size: 0.95rem !important;
+    }
 
 }
