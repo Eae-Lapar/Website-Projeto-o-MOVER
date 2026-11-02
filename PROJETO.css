@@ -3778,7 +3778,50 @@ width:100%;
     width: 100%;
     max-width: 100%;
 }
+/* =====================================
+   OBJETIVOS - CARDS COM ALTURAS IGUAIS
+===================================== */
 
+@media (min-width: 981px) {
+
+    .objetivo-topicos {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-template-rows: auto auto;
+        gap: 24px;
+        align-items: stretch;
+    }
+
+    .objetivo-topicos .coluna-topicos {
+        display: contents;
+    }
+
+    .objetivo-topicos .coluna-topicos:first-child .topico:first-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .objetivo-topicos .coluna-topicos:last-child .topico:first-child {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .objetivo-topicos .coluna-topicos:first-child .topico:last-child {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .objetivo-topicos .coluna-topicos:last-child .topico:last-child {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .objetivo-topicos .topico {
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+}
 /* =========================================================
    5. TELAS INTERMEDIÁRIAS E ZOOM
    768px ATÉ 1100px
