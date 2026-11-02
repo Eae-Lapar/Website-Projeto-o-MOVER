@@ -626,39 +626,6 @@ h2 {
   font-size:0.95rem;
 }
 
-/* ===================================
-   LOGO DO FOOTER — FUNDO TRANSPARENTE
-=================================== */
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: transparent;
-}
-
-.footer-logo img {
-    width: 65px;
-    height: 65px;
-
-    object-fit: contain;
-
-    background: transparent !important;
-    border: none;
-    border-radius: 0;
-    box-shadow: none;
-    padding: 0;
-
-    display: block;
-}
-
-.footer-logo h3 {
-    margin: 0;
-    color: #ffffff;
-    font-size: 1.4rem;
-    font-weight: 700;
-}
-
 /* ================================================= */
 /* ================= RESPONSIVO ===================== */
 /* ================================================= */
@@ -2135,313 +2102,617 @@ grid-template-columns:1fr;
   }
 
 }
-/* ================= PARCEIROS ================= */
 
-.parceiros{
-padding:110px 8%;
+/* =====================================================
+   PARCEIROS — PROJETO O3 MOVER
+   RESPONSIVIDADE COMPLETA
+===================================================== */
 
-background:
-linear-gradient(
-180deg,
-#06101d 0%,
-#081120 100%
-);
+.parceiros {
+  padding: 110px 5%;
 
-position:relative;
-overflow:hidden;
+  background: linear-gradient(
+    180deg,
+    #06101d 0%,
+    #081120 100%
+  );
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
 }
 
-/* FUNDO */
-
-.parceiros::before{
-content:"";
-
-position:absolute;
-
-width:450px;
-height:450px;
-
-background:#00d9ff10;
-
-filter:blur(140px);
-
-top:-180px;
-right:-180px;
-
-border-radius:50%;
+.parceiros,
+.parceiros * {
+  box-sizing: border-box;
 }
 
-.parceiros::after{
-content:"";
+/* Container */
 
-position:absolute;
-
-width:400px;
-height:400px;
-
-background:#64ffda10;
-
-filter:blur(140px);
-
-bottom:-180px;
-left:-180px;
-
-border-radius:50%;
+.parceiros .container {
+  width: 100%;
+  max-width: 2200px;
+  margin: 0 auto;
 }
 
-/* ================= TITULO ================= */
+/* =====================================================
+   FUNDO DECORATIVO
+===================================================== */
 
-.titulo-parceiros{
-text-align:center;
+.parceiros::before {
+  content: "";
 
-max-width:800px;
+  position: absolute;
 
-margin:0 auto 70px auto;
+  width: 450px;
+  height: 450px;
 
-position:relative;
-z-index:2;
+  background: #00d9ff10;
+  filter: blur(140px);
+
+  top: -180px;
+  right: -180px;
+
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.tag-parceiros{
-display:inline-block;
+.parceiros::after {
+  content: "";
 
-padding:8px 18px;
+  position: absolute;
 
-background:#00d9ff12;
+  width: 400px;
+  height: 400px;
 
-border:1px solid #00d9ff33;
+  background: #64ffda10;
+  filter: blur(140px);
 
-border-radius:30px;
+  bottom: -180px;
+  left: -180px;
 
-color:#00d9ff;
-
-font-size:0.82rem;
-font-weight:600;
-
-letter-spacing:1px;
-
-margin-bottom:20px;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.titulo-parceiros h2{
-font-size:2.8rem;
+/* =====================================================
+   TÍTULO
+===================================================== */
 
-color:white;
+.titulo-parceiros {
+  text-align: center;
 
-margin-bottom:18px;
+  max-width: 800px;
 
-font-family:'Archivo Black', sans-serif;
+  margin: 0 auto 65px;
+
+  position: relative;
+  z-index: 2;
 }
 
-.titulo-parceiros p{
-color:#b8c7d9;
+.tag-parceiros {
+  display: inline-block;
 
-font-size:1rem;
+  padding: 8px 18px;
 
-line-height:1.7;
+  background: #00d9ff12;
+  border: 1px solid #00d9ff33;
+
+  border-radius: 30px;
+
+  color: #00d9ff;
+
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  margin-bottom: 20px;
 }
 
-/* ================= GRID ================= */
+.titulo-parceiros h2 {
+  font-family: 'Archivo Black', sans-serif;
 
-.parceiros-grid{
-display:grid;
+  font-size: clamp(1.6rem, 3vw, 2.8rem);
+  line-height: 1.25;
 
-grid-template-columns:
-repeat(auto-fit,minmax(180px,1fr));
+  color: #fff;
 
-gap:20px;
-
-position:relative;
-z-index:2;
+  margin-bottom: 18px;
 }
 
-/* ================= CARD ================= */
+.titulo-parceiros p {
+  color: #b8c7d9;
 
-.parceiro-card{
-background:
-rgba(255,255,255,0.04);
-
-border:
-1px solid rgba(255,255,255,0.08);
-
-border-radius:20px;
-
-padding:28px 18px;
-
-text-align:center;
-
-backdrop-filter:blur(12px);
-
-transition:0.4s ease;
-
-position:relative;
-
-overflow:hidden;
-
-width:100%;
-
-margin:0 auto;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  line-height: 1.7;
 }
 
-/* HOVER */
+/* =====================================================
+   GRID — DESKTOP PADRÃO
+   6 COLUNAS / 2 FILEIRAS
+===================================================== */
 
-.parceiro-card:hover{
-transform:
-translateY(-8px)
-scale(1.03);
+.parceiros-grid {
+  display: grid;
 
-border:
-1px solid rgba(100,255,218,0.35);
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 
-box-shadow:
-0 0 22px rgba(100,255,218,0.12);
+  gap: 18px;
+
+  width: 100%;
+
+  position: relative;
+  z-index: 2;
+
+  align-items: stretch;
 }
 
-/* ================= LOGO ================= */
+/* =====================================================
+   CARDS
+===================================================== */
 
-.logo-parceiro{
-display:flex;
-align-items:center;
-justify-content:center;
+.parceiro-card {
+  background: rgba(255,255,255,0.04);
 
-height:90px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
 
-margin-bottom:18px;
+  padding: 22px 12px;
+
+  text-align: center;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+
+  position: relative;
+  overflow: hidden;
+
+  width: 100%;
+  min-width: 0;
+  min-height: 210px;
+
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
 }
 
-.logo-parceiro img{
-max-width:85px;
-max-height:70px;
+/* Hover */
 
-object-fit:contain;
+.parceiro-card:hover {
+  transform: translateY(-6px) scale(1.02);
 
-filter:
-grayscale(100%)
-brightness(1.15);
+  border-color: rgba(100,255,218,0.35);
 
-opacity:0.7;
-
-transition:0.4s ease;
+  box-shadow:
+    0 0 22px rgba(100,255,218,0.12);
 }
 
-/* COLORIDO HOVER */
+/* =====================================================
+   LOGOS
+===================================================== */
 
-.parceiro-card:hover .logo-parceiro img{
-filter:
-grayscale(0%)
-brightness(1);
+.logo-parceiro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-opacity:1;
+  width: 100%;
+  height: 85px;
 
-transform:scale(1.08);
+  flex-shrink: 0;
 }
 
-/* ================= TITULO ================= */
+.logo-parceiro img {
+  display: block;
 
-.parceiro-card h3{
-font-size:1.1rem;
+  max-width: 90%;
+  max-height: 75px;
 
-color:white;
+  width: auto;
+  height: auto;
 
-margin-bottom:18px;
+  object-fit: contain;
 
-transition:0.3s;
+  filter: grayscale(100%) brightness(1.15);
+  opacity: 0.75;
+
+  transition:
+    transform 0.35s ease,
+    filter 0.35s ease,
+    opacity 0.35s ease;
 }
 
-.parceiro-card:hover h3{
-color:#64ffda;
+.parceiro-card:hover .logo-parceiro img {
+  filter: grayscale(0%) brightness(1);
+  opacity: 1;
+  transform: scale(1.06);
 }
 
-/* ================= BOTÃO ================= */
+/* =====================================================
+   NOMES
+===================================================== */
 
-.btn-parceiro{
-display:inline-block;
+.parceiro-card h3 {
+  font-size: 1rem;
+  line-height: 1.3;
 
-padding:10px 16px;
+  color: #fff;
 
-border-radius:30px;
+  margin: 0;
 
-background:#ffffff08;
+  overflow-wrap: anywhere;
 
-border:1px solid rgba(255,255,255,0.08);
-
-color:#dbe7f7;
-
-font-size:0.72rem;
-font-weight:600;
-
-text-decoration:none;
-
-transition:0.35s ease;
+  transition: color 0.3s ease;
 }
 
-/* HOVER BOTÃO */
-
-.btn-parceiro:hover{
-background:
-linear-gradient(
-90deg,
-#00d9ff,
-#64ffda
-);
-
-color:#081120;
-
-border-color:transparent;
-
-transform:
-translateY(-2px)
-scale(1.04);
-
-box-shadow:
-0 8px 18px rgba(100,255,218,0.22);
+.parceiro-card:hover h3 {
+  color: #64ffda;
 }
 
-/* ================= RESPONSIVO ================= */
+/* =====================================================
+   BOTÕES
+===================================================== */
 
-@media(max-width:768px){
+.btn-parceiro {
+  display: inline-flex;
 
-.titulo-parceiros h2{
-font-size:2.2rem;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 180px;
+  min-height: 40px;
+
+  padding: 9px 10px;
+
+  border-radius: 30px;
+
+  background: #ffffff08;
+  border: 1px solid rgba(255,255,255,0.12);
+
+  color: #dbe7f7;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1.3;
+
+  text-decoration: none;
+  text-align: center;
+
+  white-space: normal;
+
+  transition:
+    background 0.35s ease,
+    color 0.35s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  flex-shrink: 0;
 }
 
-.parceiros-grid{
-grid-template-columns:1fr 1fr;
+.btn-parceiro:hover {
+  background: linear-gradient(
+    90deg,
+    #00d9ff,
+    #64ffda
+  );
+
+  color: #081120;
+
+  border-color: transparent;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 18px rgba(100,255,218,0.22);
 }
 
+.btn-parceiro:focus-visible {
+  outline: 3px solid #00d9ff;
+  outline-offset: 3px;
 }
 
-@media(max-width:520px){
+/* =====================================================
+   MONITORES ULTRAWIDE
+   2560px OU MAIS
+   12 CARDS EM UMA FILEIRA
+===================================================== */
 
-.parceiros-grid{
-grid-template-columns:1fr;
+@media (min-width: 2560px) {
+
+  .parceiros {
+    padding: 130px 4%;
+  }
+
+  .parceiros .container {
+    max-width: 2400px;
+  }
+
+  .parceiros-grid {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .parceiro-card {
+    min-height: 190px;
+    padding: 18px 8px;
+    gap: 10px;
+  }
+
+  .logo-parceiro {
+    height: 70px;
+  }
+
+  .logo-parceiro img {
+    max-height: 62px;
+  }
+
+  .parceiro-card h3 {
+    font-size: 0.9rem;
+  }
+
+  .btn-parceiro {
+    font-size: 0.65rem;
+    padding: 8px 5px;
+  }
+
 }
 
-.parceiro-card{
-max-width:100%;
-}
+/* =====================================================
+   DESKTOPS E NOTEBOOKS
+   1200px ATÉ 2559px
+   6 COLUNAS / 2 FILEIRAS
+===================================================== */
+
+@media (min-width: 1200px) and (max-width: 2559px) {
+
+  .parceiros-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
 
 }
 
-/* ================= HERO ================= */
+/* =====================================================
+   TABLET HORIZONTAL / NOTEBOOK PEQUENO
+   900px ATÉ 1199px
+   4 COLUNAS / 3 FILEIRAS
+===================================================== */
 
-.hero {
-    min-height: 100vh;
-    padding: 25px 7%;
+@media (min-width: 900px) and (max-width: 1199px) {
 
-    background: linear-gradient(
-        rgba(2, 6, 23, 0.84),
-        rgba(2, 6, 23, 0.96)
-    );
+  .parceiros {
+    padding: 90px 5%;
+  }
 
-    background-size: cover;
-    background-position: center;
+  .parceiros-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+  }
 
-    position: relative;
-    overflow: hidden;
+  .parceiro-card {
+    min-height: 205px;
+    padding: 20px 12px;
+  }
 
-    display: flex;
-    flex-direction: column;
+  .logo-parceiro {
+    height: 80px;
+  }
+
+}
+
+/* =====================================================
+   TABLET VERTICAL
+   600px ATÉ 899px
+   3 COLUNAS / 4 FILEIRAS
+===================================================== */
+
+@media (min-width: 600px) and (max-width: 899px) {
+
+  .parceiros {
+    padding: 80px 5%;
+  }
+
+  .titulo-parceiros {
+    margin-bottom: 45px;
+  }
+
+  .parceiros-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .parceiro-card {
+    min-height: 195px;
+    padding: 18px 10px;
+    gap: 10px;
+  }
+
+  .logo-parceiro {
+    height: 75px;
+  }
+
+  .logo-parceiro img {
+    max-height: 65px;
+  }
+
+  .parceiro-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .btn-parceiro {
+    font-size: 0.7rem;
+  }
+
+}
+
+/* =====================================================
+   CELULARES
+   360px ATÉ 599px
+   2 COLUNAS / 6 FILEIRAS
+===================================================== */
+
+/* =====================================================
+   CELULARES — 390px ATÉ 599px
+   4 CARDS POR FILEIRA
+===================================================== */
+
+@media (min-width: 390px) and (max-width: 599px) {
+
+  .parceiros {
+    padding: 60px 3%;
+  }
+
+  .titulo-parceiros {
+    margin-bottom: 30px;
+  }
+
+  .titulo-parceiros h2 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .titulo-parceiros p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .parceiros-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .parceiro-card {
+    min-height: 125px;
+    padding: 10px 3px;
+    border-radius: 10px;
+    gap: 5px;
+  }
+
+  .logo-parceiro {
+    height: 45px;
+  }
+
+  .logo-parceiro img {
+    max-width: 90%;
+    max-height: 40px;
+  }
+
+  .parceiro-card h3 {
+    font-size: 0.65rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  .btn-parceiro {
+    min-height: 30px;
+    padding: 5px 2px;
+    font-size: 0.48rem;
+    line-height: 1.2;
+    border-radius: 8px;
+  }
+
+  .parceiro-card:hover {
+    transform: none;
+  }
+
+}
+
+/* =====================================================
+   CELULARES PEQUENOS — ATÉ 389px
+   3 CARDS POR FILEIRA
+===================================================== */
+
+@media (max-width: 389px) {
+
+  .parceiros {
+    padding: 55px 3%;
+  }
+
+  .titulo-parceiros {
+    margin-bottom: 28px;
+  }
+
+  .titulo-parceiros h2 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+  }
+
+  .titulo-parceiros p {
+    font-size: 0.8rem;
+    line-height: 1.55;
+  }
+
+  .parceiros-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .parceiro-card {
+    min-height: 115px;
+    padding: 12px 5px;
+    border-radius: 10px;
+    gap: 8px;
+    justify-content: center;
+  }
+
+  .logo-parceiro {
+    height: 52px;
+  }
+
+  .logo-parceiro img {
+    max-width: 90%;
+    max-height: 48px;
+  }
+
+  .parceiro-card h3 {
+    font-size: 0.7rem;
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+  }
+
+  /* Esconde o botão apenas no celular pequeno */
+
+  .parceiro-card .btn-parceiro {
+    display: none;
+  }
+
+  /* Indica que o card é interativo */
+
+  .parceiro-card:has(.btn-parceiro) {
+    cursor: pointer;
+  }
+
+  .parceiro-card:has(.btn-parceiro):active {
+    transform: scale(0.96);
+    border-color: #64ffda;
+  }
+
+}
+
+
+/* =====================================================
+   ACESSIBILIDADE
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .parceiro-card,
+  .logo-parceiro img,
+  .parceiro-card h3,
+  .btn-parceiro {
+    transition: none !important;
+  }
+
 }
 
 /* ================= NAVBAR ================= */
@@ -4664,71 +4935,527 @@ width:100%;
 }
 /* ================= RESPONSIVO ================= */
 
-@media(max-width:980px){
+/* =====================================================
+   GALERIA 3D — RESPONSIVIDADE COMPLETA
+   PROJETO O3 MOVER
+===================================================== */
 
-  .carousel-3d{
-    height:420px;
+/* Ajustes gerais para todas as telas */
+
+.galeria,
+.galeria * {
+  box-sizing: border-box;
+}
+
+.galeria {
+  padding: clamp(65px, 8vw, 140px) 5%;
+  overflow: hidden;
+}
+
+.galeria .container {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.titulo-galeria {
+  max-width: 850px;
+  margin: 0 auto 65px;
+  text-align: center;
+}
+
+.titulo-galeria h2 {
+  font-size: clamp(1.7rem, 3.5vw, 3rem);
+  line-height: 1.2;
+}
+
+.titulo-galeria p {
+  font-size: clamp(0.9rem, 1.3vw, 1.05rem);
+  line-height: 1.6;
+}
+
+/* Carrossel */
+
+.carousel-3d {
+  width: 100%;
+  height: 570px;
+  min-width: 0;
+  position: relative;
+  perspective: 1400px;
+}
+
+.carousel-track {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Card */
+
+.galeria-card {
+  width: 420px;
+  height: 510px;
+  max-width: none;
+  border-radius: 26px;
+}
+
+/* Imagem */
+
+.galeria-card > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay com espaço suficiente para conteúdo */
+
+.galeria-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+
+  background: linear-gradient(
+    to top,
+    rgba(2, 6, 23, 0.99) 0%,
+    rgba(2, 6, 23, 0.92) 35%,
+    rgba(2, 6, 23, 0.35) 75%,
+    rgba(2, 6, 23, 0.05) 100%
+  );
+
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #38bdf8 transparent;
+}
+
+.galeria-overlay h3 {
+  font-size: clamp(1.15rem, 1.7vw, 1.5rem);
+  line-height: 1.35;
+  margin: 0;
+  overflow-wrap: anywhere;
+  flex-shrink: 0;
+}
+
+.galeria-overlay p {
+  font-size: 0.93rem;
+  line-height: 1.55;
+  margin: 0;
+  overflow-wrap: anywhere;
+  flex-shrink: 0;
+}
+
+/* Botão sempre no fluxo do conteúdo */
+
+.galeria .btn-galeria {
+  margin-top: 8px;
+  padding: 11px 18px;
+  font-size: 0.9rem;
+  min-height: 44px;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+/* Botões de navegação exclusivos da galeria */
+
+.galeria .nav {
+  width: 54px;
+  height: 54px;
+  z-index: 20;
+}
+
+.galeria .prev {
+  left: 0;
+}
+
+.galeria .next {
+  right: 0;
+}
+
+/* =====================================================
+   TELAS GRANDES — 1600px OU MAIS
+===================================================== */
+
+@media (min-width: 1600px) {
+
+  .carousel-3d {
+    height: 620px;
   }
 
-  .galeria-card{
-    width:320px;
-    height:380px;
+  .galeria-card {
+    width: 460px;
+    height: 550px;
   }
 
-  .galeria-card.left{
-    transform:
-    translateX(-115%)
-    translateY(-50%)
-    scale(0.75)
-    rotateY(25deg);
+  .galeria-overlay {
+    padding: 32px;
   }
 
-  .galeria-card.right{
-    transform:
-    translateX(15%)
-    translateY(-50%)
-    scale(0.75)
-    rotateY(-25deg);
+  .galeria-overlay h3 {
+    font-size: 1.55rem;
+  }
+
+  .galeria-overlay p {
+    font-size: 1rem;
   }
 
 }
 
-@media(max-width:700px){
+/* =====================================================
+   NOTEBOOKS E DESKTOPS MÉDIOS
+   1024px ATÉ 1399px
+===================================================== */
 
-  .galeria{
-    padding:100px 6%;
+@media (min-width: 1024px) and (max-width: 1399px) {
+
+  .carousel-3d {
+    height: 550px;
   }
 
-  .titulo-galeria h2{
-    font-size:2.2rem;
+  .galeria-card {
+    width: 380px;
+    height: 490px;
   }
 
-  .titulo-galeria p{
-    font-size:0.95rem;
+  .galeria-overlay {
+    padding: 24px;
   }
 
-  .carousel-3d{
-    height:360px;
+  .galeria-card.left {
+    transform:
+      translateX(-125%)
+      translateY(-50%)
+      scale(0.78)
+      rotateY(30deg);
   }
 
-  .galeria-card{
-    width:260px;
-    height:320px;
+  .galeria-card.right {
+    transform:
+      translateX(25%)
+      translateY(-50%)
+      scale(0.78)
+      rotateY(-30deg);
   }
+
+}
+
+/* =====================================================
+   TABLETS
+   768px ATÉ 1023px
+===================================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .galeria {
+    padding: 90px 5%;
+  }
+
+  .titulo-galeria {
+    margin-bottom: 45px;
+  }
+
+  .carousel-3d {
+    height: 540px;
+  }
+
+  .galeria-card {
+    width: 350px;
+    height: 490px;
+    border-radius: 22px;
+  }
+
+  .galeria-overlay {
+    padding: 22px;
+  }
+
+  .galeria-overlay h3 {
+    font-size: 1.3rem;
+  }
+
+  .galeria-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .galeria-card.left {
+    transform:
+      translateX(-110%)
+      translateY(-50%)
+      scale(0.72)
+      rotateY(22deg);
+
+    opacity: 0.3;
+  }
+
+  .galeria-card.right {
+    transform:
+      translateX(10%)
+      translateY(-50%)
+      scale(0.72)
+      rotateY(-22deg);
+
+    opacity: 0.3;
+  }
+
+  .galeria .nav {
+    width: 46px;
+    height: 46px;
+  }
+
+}
+
+/* =====================================================
+   CELULARES
+   ATÉ 767px
+===================================================== */
+
+@media (max-width: 767px) {
+
+  .galeria {
+    padding: 75px 14px;
+  }
+
+  .titulo-galeria {
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+
+  .titulo-galeria .tag-galeria {
+    font-size: 0.7rem;
+    padding: 8px 14px;
+    margin-bottom: 14px;
+  }
+
+  .titulo-galeria h2 {
+    font-size: clamp(1.55rem, 6vw, 2rem);
+    margin-bottom: 14px;
+  }
+
+  .titulo-galeria p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .carousel-3d {
+    height: 540px;
+    perspective: none;
+  }
+
+  .galeria-card {
+    width: min(100%, 370px);
+    height: 490px;
+    border-radius: 20px;
+  }
+
+  /* Apenas o card central fica visível */
 
   .galeria-card.left,
-  .galeria-card.right{
-    opacity:0;
-    pointer-events:none;
+  .galeria-card.right {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 
-  .nav{
-    width:55px;
-    height:55px;
-    font-size:1.2rem;
+  .galeria-card.active {
+    opacity: 1;
+    visibility: visible;
+    transform:
+      translate(-50%, -50%)
+      scale(1);
   }
 
-}/* =================================================
+  /* Remove aumento que atrapalha o toque */
+
+  .galeria-card.active:hover {
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+  }
+
+  .galeria-card.active:hover img {
+    transform: none;
+    filter: none;
+  }
+
+  .galeria-overlay {
+    padding: 20px;
+    gap: 9px;
+
+    background: linear-gradient(
+      to top,
+      rgba(2, 6, 23, 0.99) 0%,
+      rgba(2, 6, 23, 0.95) 40%,
+      rgba(2, 6, 23, 0.3) 85%,
+      transparent 100%
+    );
+  }
+
+  .galeria-overlay h3 {
+    font-size: 1.2rem;
+    line-height: 1.35;
+  }
+
+  .galeria-overlay p {
+    font-size: 0.87rem;
+    line-height: 1.5;
+  }
+
+  .galeria .btn-galeria {
+    font-size: 0.85rem;
+    padding: 10px 15px;
+    margin-top: 7px;
+  }
+
+  /* Setas nas laterais do card */
+
+  .galeria .nav {
+    width: 42px;
+    height: 42px;
+    font-size: 1.05rem;
+    top: 50%;
+    background: rgba(2, 6, 23, 0.94);
+  }
+
+  .galeria .prev {
+    left: -8px;
+  }
+
+  .galeria .next {
+    right: -8px;
+  }
+
+}
+
+/* =====================================================
+   CELULARES PEQUENOS
+   ATÉ 390px
+===================================================== */
+
+@media (max-width: 390px) {
+
+  .galeria {
+    padding: 60px 10px;
+  }
+
+  .carousel-3d {
+    height: 530px;
+  }
+
+  .galeria-card {
+    width: calc(100% - 20px);
+    height: 490px;
+    border-radius: 18px;
+  }
+
+  .galeria-overlay {
+    padding: 16px;
+    gap: 8px;
+  }
+
+  .galeria-overlay h3 {
+    font-size: 1.08rem;
+    line-height: 1.3;
+  }
+
+  .galeria-overlay p {
+    font-size: 0.81rem;
+    line-height: 1.45;
+  }
+
+  .galeria .btn-galeria {
+    font-size: 0.8rem;
+    padding: 9px 13px;
+    min-height: 42px;
+  }
+
+  .galeria .nav {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .galeria .prev {
+    left: -5px;
+  }
+
+  .galeria .next {
+    right: -5px;
+  }
+
+}
+
+/* =====================================================
+   CELULARES MUITO PEQUENOS
+   ATÉ 320px
+===================================================== */
+
+@media (max-width: 320px) {
+
+  .galeria {
+    padding-inline: 8px;
+  }
+
+  .carousel-3d {
+    height: 530px;
+  }
+
+  .galeria-card {
+    width: calc(100% - 16px);
+    height: 490px;
+  }
+
+  .galeria-overlay {
+    padding: 13px;
+  }
+
+  .galeria-overlay h3 {
+    font-size: 1rem;
+  }
+
+  .galeria-overlay p {
+    font-size: 0.78rem;
+  }
+
+}
+
+/* =====================================================
+   ACESSIBILIDADE E INTERAÇÃO
+===================================================== */
+
+/* Destaque ao navegar por teclado */
+
+.galeria .nav:focus-visible,
+.galeria .btn-galeria:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+/* Impede clique em links de cards laterais */
+
+.galeria-card:not(.active) .btn-galeria {
+  pointer-events: none;
+}
+
+/* Reduz animações conforme preferência do usuário */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .galeria-card,
+  .galeria-card img,
+  .galeria-overlay h3,
+  .galeria-overlay p,
+  .galeria .nav,
+  .galeria .btn-galeria {
+    transition: none !important;
+  }
+
+}
+/* =================================================
    RESPONSIVIDADE - PROJETO O3 MOVER
    CELULARES - ATÉ 767px
 ================================================= */
