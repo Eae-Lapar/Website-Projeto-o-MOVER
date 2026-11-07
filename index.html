@@ -54,16 +54,20 @@
   <div class="hero-videos" aria-hidden="true">
 
       <video class="hero-video ativo" autoplay muted loop playsinline preload="auto">
-          <source src="gifs/lago_bh.mp4" type="video/mp4">
+          <source src="gifs/lago-bh.mp4" type="video/mp4">
       </video>
 
       <video class="hero-video" muted loop playsinline preload="metadata">
-          <source src="gifs/saopaulo_ponte.mp4" type="video/mp4">
+          <source src="gifs/sao-paulo.mp4" type="video/mp4">
       </video>
 
       <video class="hero-video" muted loop playsinline preload="metadata">
           <source src="gifs/carro_parado.mp4" type="video/mp4">
       </video>
+    <!-- 4. Novo vídeo -->
+    <video class="hero-video" muted loop playsinline preload="metadata">
+        <source src="gifs/avpaulistasaopaulo.mp4" type="video/mp4">
+    </video>
 
   </div>
 <!-- ==========================================
@@ -1269,6 +1273,68 @@ ozônio troposférico.</p>
           </div>
 
         </div>
+
+
+        <!-- CARD -->
+        <div class="integrante-card">
+
+          <div class="integrante-img">
+
+            <img src="imgs/Pessoal/Myllene.jpeg" alt="Myllene Pedroso">
+
+            <span class="cargo ic">
+              BG
+            </span>
+
+          </div>
+
+          <div class="integrante-info">
+
+            <h4>Myllene Pedroso</h4>
+
+            <span class="funcao">
+              Elaboração de inventário de fontes fixas do armazenamento de combustíveis em refinarias
+            </span>
+
+            <p>
+              Atua no levantamento, na organização e na análise de dados relacionados ao armazenamento de combustíveis em refinarias, contribuindo para a elaboração de inventários de emissões atmosféricas e fornecendo informações para a modelagem e quantificação das emissões provenientes dos tanques de armazenamento.
+            </p>
+
+            <div class="skills">
+
+              <span>Excel</span>
+              <span>Análise de dados</span>
+              <span>Python</span>
+
+            </div>
+
+            <!-- CONTATOS -->
+            <div class="integrante-contato">
+
+              <!-- EMAIL -->
+              <a href="mailto:myllene.ped@gmail.com"
+                aria-label="Email de Myllene Pedroso">
+
+                <img src="imgs/email-logo-removebg-preview.png" alt="Email">
+
+              </a>
+
+              <!-- LATTES -->
+              <a href="http://lattes.cnpq.br/2203845913944282"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Currículo Lattes de Myllene Pedroso">
+
+                <img src="imgs/logo-lattes.png" alt="Lattes">
+
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+
 
         <!-- CARD -->
         <div class="integrante-card">
@@ -2679,6 +2745,24 @@ simulações a serem realizadas.
           </div>
 
         </div>
+
+        <!-- ================= CARD 1 ================= -->
+        <div class="galeria-card">
+
+          <img src="imgs/galeria/Saopaulo.jpeg" alt="Foto cidade de São Paulo">
+
+          <div class="galeria-overlay">
+
+            <h3>São Paulo Vista do Alto: Urbanização e Qualidade do Ar</h3>
+
+            <p>
+              Vista aérea da cidade de São Paulo, evidenciando a intensa urbanização, a concentração de edifícios e a presença de uma camada de névoa sobre a paisagem. A imagem destaca a importância do monitoramento da poluição atmosférica e dos estudos sobre qualidade do ar em grandes centros urbanos, temas centrais das pesquisas do Projeto O₃ MOVER.
+            </p>
+
+          </div>
+
+        </div>
+      
                 <!-- ================= CARD 4 ================= -->
         <div class="galeria-card">
 
@@ -4014,7 +4098,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const videos = document.querySelectorAll(".hero-video");
 
-    const sequencia = [0, 1, 2, 1];
+    const sequencia = [0, 1, 2, 3];
 
     let posicao = 0;
 
