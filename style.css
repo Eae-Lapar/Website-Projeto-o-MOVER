@@ -1,411 +1,287 @@
-/* =========================================================
-   RESET GLOBAL
-========================================================= */
+/* RESET GLOBAL */
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-:root{
-
-/* CORES */
-
---bg-primary:#06101d;
---bg-secondary:#081120;
---bg-card:rgba(255,255,255,0.05);
-
---text-primary:#ffffff;
---text-secondary:#c7d5e6;
-
---color-main:#64ffda;
---color-blue:#00d9ff;
-
---border-color:rgba(255,255,255,0.08);
-
-/* SOMBRAS */
-
---shadow-main:
-0 10px 30px rgba(0,0,0,0.35);
-
---shadow-hover:
-0 0 25px rgba(100,255,218,0.12);
-
-/* TRANSIÇÃO */
-
---transition:0.35s ease;
+:root {
+  --bg-primary: #06101d;
+  --bg-secondary: #081120;
+  --bg-card: rgba(255,255,255,0.05);
+  --text-primary: #ffffff;
+  --text-secondary: #c7d5e6;
+  --color-main: #64ffda;
+  --color-blue: #00d9ff;
+  --border-color: rgba(255,255,255,0.08);
+  --shadow-main: 0 10px 30px rgba(0,0,0,0.35);
+  --shadow-hover: 0 0 25px rgba(100,255,218,0.12);
+  --transition: 0.35s ease;
 }
 
-/* =========================================================
-   BODY
-========================================================= */
+/* BODY */
 
-body{
-background:var(--bg-primary);
-color:var(--text-primary);
-
-font-family:'Poppins',sans-serif;
-
-line-height:1.7;
-
-overflow-x:hidden;
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: "Poppins",sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
 }
 
-/* =========================================================
-   CONTAINER
-========================================================= */
+/* CONTAINER */
 
-.container{
-width:100%;
-max-width:1300px;
-
-margin:0 auto;
+.container {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-/* =========================================================
-   SECTION PADRÃO
-========================================================= */
+/* SECTION PADRÃO */
 
-section{
-padding:110px 8%;
-position:relative;
-overflow:hidden;
+section {
+  padding: 110px 8%;
+  position: relative;
+  overflow: hidden;
 }
 
-/* =========================================================
-   TÍTULOS GLOBAIS
-========================================================= */
+/* TÍTULOS GLOBAIS */
 
-h1,h2,h3,h4{
-font-weight:700;
-line-height:1.3;
+h1,h2,h3,h4 {
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-h2{
-position:relative;
-
-display:inline-block;
-
-font-size:2.8rem;
-
-font-family:'Archivo Black',sans-serif;
-
-margin-bottom:22px;
-
-color:white;
+h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2.8rem;
+  font-family: "Archivo Black",sans-serif;
+  margin-bottom: 22px;
+  color: white;
 }
 
 /* LINHA */
 
-h2::after{
-content:"";
-
-position:absolute;
-
-left:0;
-bottom:-8px;
-
-width:60%;
-height:4px;
-
-border-radius:20px;
-
-background:
-linear-gradient(
-90deg,
-var(--color-main),
-var(--color-blue)
-);
-
-transition:var(--transition);
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 60%;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient( 90deg, var(--color-main), var(--color-blue) );
+  transition: var(--transition);
 }
 
-h2:hover::after{
-width:100%;
+h2:hover::after {
+  width: 100%;
 }
 
 /* PARÁGRAFOS */
 
-p{
-color:var(--text-secondary);
-font-size:1rem;
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
 }
 
-/* =========================================================
-   BOTÕES GLOBAIS
-========================================================= */
+/* BOTÕES GLOBAIS */
 
-.btn{
-display:inline-flex;
-
-align-items:center;
-justify-content:center;
-
-padding:12px 22px;
-
-border-radius:14px;
-
-border:1px solid rgba(100,255,218,0.25);
-
-background:
-rgba(255,255,255,0.04);
-
-color:var(--text-primary);
-
-text-decoration:none;
-
-font-size:0.9rem;
-font-weight:600;
-
-transition:var(--transition);
-
-cursor:pointer;
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 14px;
+  border: 1px solid rgba(100,255,218,0.25);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+  cursor: pointer;
 }
 
 /* HOVER */
 
-.btn:hover{
-background:
-linear-gradient(
-90deg,
-var(--color-blue),
-var(--color-main)
-);
-
-color:#06101d;
-
-transform:
-translateY(-4px)
-scale(1.03);
-
-box-shadow:
-0 10px 20px rgba(100,255,218,0.18);
+.btn:hover {
+  background: linear-gradient( 90deg, var(--color-blue), var(--color-main) );
+  color: #06101d;
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(100,255,218,0.18);
 }
 
-/* =========================================================
-   HEADER — FUNDO COM VÍDEOS
-========================================================= */
+/* HEADER — FUNDO COM VÍDEOS */
 
 header {
-    position: relative;
-    padding: 70px 20px;
-    text-align: center;
-    overflow: hidden;
-    background: #06101d;
+  position: relative;
+  padding: 70px 20px;
+  text-align: center;
+  overflow: hidden;
+  background: #06101d;
 }
 
 /* CONTAINER DOS VÍDEOS */
 
 .hero-videos {
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    overflow: hidden;
-    pointer-events: none;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
 }
 
 /* VÍDEOS */
 
 .hero-video {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    inset: 0;
-
-    object-fit: cover;
-
-    opacity: 0;
-    visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0;
+  visibility: hidden;
 }
 
 /* VÍDEO ATIVO */
 
 .hero-video.ativo {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
-/* =========================================================
-   OVERLAY DO FUNDO
-========================================================= */
+/* OVERLAY DO FUNDO */
 
 header::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background: linear-gradient(
-        135deg,
-        rgba(6,16,29,0.20),
-        rgba(8,17,32,0.65)
-    );
-
-    z-index: 1;
-    pointer-events: none;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient( 135deg, rgba(6,16,29,0.20), rgba(8,17,32,0.65) );
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* CONTEÚDO ACIMA DOS VÍDEOS */
 
 header > *:not(.hero-videos) {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
-/* =========================================================
-   TYPING TEXT
-========================================================= */
-.typing-text{
-    display:block;
-    width:100%;
-    max-width:900px;
-    margin:25px auto 0;
-    padding:0 10px;
+/* TYPING TEXT */
 
-    font-size:1rem;
-    font-family:'Archivo Black',sans-serif;
-    color:white;
-    line-height:1.6;
-    text-align:center;
-
-    white-space:normal;
-    overflow:visible;
-
-    border-right:none;
+.typing-text {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-family: "Archivo Black",sans-serif;
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  border-right: none;
 }
-.typing-text::after{
-    content:"";
-    display:inline-block;
-    width:3px;
-    height:1em;
-    margin-left:5px;
-    vertical-align:middle;
-    background:var(--color-blue);
-    animation:cursor 0.7s infinite;
+
+.typing-text::after {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 5px;
+  vertical-align: middle;
+  background: var(--color-blue);
+  animation: cursor 0.7s infinite;
 }
+
 /* CURSOR */
 
-@keyframes cursor{
+@keyframes cursor {
+  0% {
+    border-color: transparent;
+  }
 
-0%{
-border-color:transparent;
+  50% {
+    border-color: var(--color-blue);
+  }
+
+  100% {
+    border-color: transparent;
+  }
 }
 
-50%{
-border-color:var(--color-blue);
-}
+/* CARD PADRÃO */
 
-100%{
-border-color:transparent;
-}
-
-}
-
-/* =========================================================
-   CARD PADRÃO
-========================================================= */
-
-.card{
-background:var(--bg-card);
-
-border:
-1px solid var(--border-color);
-
-border-radius:24px;
-
-padding:28px;
-
-backdrop-filter:blur(12px);
-
-box-shadow:var(--shadow-main);
-
-transition:var(--transition);
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 28px;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-main);
+  transition: var(--transition);
 }
 
 /* HOVER */
 
-.card:hover{
-transform:
-translateY(-8px)
-scale(1.02);
-
-box-shadow:var(--shadow-hover);
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
 }
 
-/* =========================================================
-   GRID PADRÃO
-========================================================= */
+/* GRID PADRÃO */
 
-.grid{
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:25px;
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
 }
 
-/* =========================================================
-   TABELAS
-========================================================= */
+/* TABELAS */
 
-table{
-width:100%;
-
-border-collapse:collapse;
-
-overflow:hidden;
-
-border-radius:20px;
-
-margin-top:20px;
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 20px;
+  margin-top: 20px;
 }
 
-table th{
-background:var(--color-main);
-
-color:#06101d;
-
-padding:14px;
+table th {
+  background: var(--color-main);
+  color: #06101d;
+  padding: 14px;
 }
 
-table td{
-padding:14px;
-
-background:#0d1d33;
-
-color:#dbe7f7;
+table td {
+  padding: 14px;
+  background: #0d1d33;
+  color: #dbe7f7;
 }
 
-table tr:nth-child(even) td{
-background:#10233d;
+table tr:nth-child(even) td {
+  background: #10233d;
 }
 
-/* =====================================================
-   FOOTER — PROJETO O3 MOVER
-   RESPONSIVIDADE COMPLETA
-===================================================== */
+/* FOOTER — PROJETO O3 MOVER RESPONSIVIDADE COMPLETA */
 
 .footer {
   position: relative;
   overflow: hidden;
   isolation: isolate;
-
-  background: linear-gradient(
-    180deg,
-    #07111f 0%,
-    #081827 35%,
-    #0b1f33 100%
-  );
-
+  background: linear-gradient( 180deg, #07111f 0%, #081827 35%, #0b1f33 100% );
   padding: 95px 6% 32px;
-
   border-top: 1px solid rgba(100,255,218,0.12);
 }
 
-.footer,
-.footer * {
+.footer, .footer * {
   box-sizing: border-box;
 }
 
@@ -415,12 +291,9 @@ background:#10233d;
   margin: 0 auto;
 }
 
-/* =====================================================
-   FUNDO DECORATIVO
-===================================================== */
+/* FUNDO DECORATIVO */
 
-.footer::before,
-.footer::after {
+.footer::before, .footer::after {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -433,12 +306,7 @@ background:#10233d;
   left: -150px;
   width: 350px;
   height: 350px;
-
-  background: radial-gradient(
-    circle,
-    rgba(100,255,218,0.12),
-    transparent 70%
-  );
+  background: radial-gradient( circle, rgba(100,255,218,0.12), transparent 70% );
 }
 
 .footer::after {
@@ -446,26 +314,17 @@ background:#10233d;
   right: -150px;
   width: 380px;
   height: 380px;
-
-  background: radial-gradient(
-    circle,
-    rgba(0,170,255,0.10),
-    transparent 70%
-  );
+  background: radial-gradient( circle, rgba(0,170,255,0.10), transparent 70% );
 }
 
-/* =====================================================
-   GRID PRINCIPAL
-===================================================== */
+/* GRID PRINCIPAL */
 
 .footer-container {
   position: relative;
   z-index: 2;
-
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
   gap: 48px;
-
   align-items: start;
 }
 
@@ -477,28 +336,22 @@ background:#10233d;
   max-width: 410px;
 }
 
-/* =====================================================
-   LOGO E NOME DO PROJETO
-===================================================== */
+/* LOGO E NOME DO PROJETO */
 
 .footer-logo {
   display: flex;
   align-items: center;
   gap: 14px;
-
   margin-bottom: 20px;
   background: transparent;
 }
 
 .footer-logo img {
   display: block;
-
   width: 68px;
   height: 68px;
-
   object-fit: contain;
   flex-shrink: 0;
-
   background: transparent;
   border: none;
   border-radius: 0;
@@ -508,40 +361,28 @@ background:#10233d;
 
 .footer-logo h3 {
   margin: 0;
-
   font-size: 1.45rem;
   line-height: 1.3;
   font-weight: 700;
-
   color: #fff;
 }
 
-/* =====================================================
-   DESCRIÇÃO
-===================================================== */
+/* DESCRIÇÃO */
 
 .footer-desc {
   margin: 0;
-
   color: #b8c7d9;
-
   font-size: 0.93rem;
   line-height: 1.8;
-
   overflow-wrap: break-word;
 }
 
-/* =====================================================
-   TÍTULOS DAS COLUNAS
-===================================================== */
+/* TÍTULOS DAS COLUNAS */
 
 .footer-col h4 {
   position: relative;
-
   margin: 0 0 28px;
-
   color: #fff;
-
   font-size: 1.05rem;
   line-height: 1.4;
   font-weight: 600;
@@ -549,26 +390,16 @@ background:#10233d;
 
 .footer-col h4::after {
   content: "";
-
   position: absolute;
   left: 0;
   bottom: -10px;
-
   width: 42px;
   height: 3px;
-
   border-radius: 20px;
-
-  background: linear-gradient(
-    90deg,
-    var(--color-main, #64ffda),
-    transparent
-  );
+  background: linear-gradient( 90deg, var(--color-main, #64ffda), transparent );
 }
 
-/* =====================================================
-   LINKS RÁPIDOS
-===================================================== */
+/* LINKS RÁPIDOS */
 
 .footer-links {
   display: flex;
@@ -580,47 +411,32 @@ background:#10233d;
 .footer-links a {
   display: inline-flex;
   align-items: center;
-
   width: fit-content;
   min-height: 30px;
-
   padding: 3px 0;
-
   color: #c9d7e8;
   font-size: 0.93rem;
   line-height: 1.4;
   font-weight: 500;
-
   text-decoration: none;
-
-  transition:
-    color 0.35s ease,
-    transform 0.35s ease;
+  transition: color 0.35s ease, transform 0.35s ease;
 }
 
 /* Uma única seta, alinhada ao texto */
 
 .footer-links a::before {
   content: "➜";
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 0;
   flex-shrink: 0;
-
   overflow: hidden;
-
   color: var(--color-main, #64ffda);
   font-size: 0.85rem;
   line-height: 1;
-
   opacity: 0;
-
-  transition:
-    width 0.35s ease,
-    opacity 0.35s ease;
+  transition: width 0.35s ease, opacity 0.35s ease;
 }
 
 .footer-links a:hover {
@@ -644,9 +460,7 @@ background:#10233d;
   opacity: 1;
 }
 
-/* =====================================================
-   COORDENAÇÃO
-===================================================== */
+/* COORDENAÇÃO */
 
 .footer-contact {
   display: flex;
@@ -657,23 +471,18 @@ background:#10233d;
 
 .footer-contact p {
   margin: 0;
-
   font-size: 0.93rem;
   font-weight: 600;
-
   color: var(--color-main, #64ffda);
 }
 
 .footer-contact span {
   color: #c7d4e5;
-
   font-size: 0.93rem;
   line-height: 1.6;
 }
 
-/* =====================================================
-   REDES SOCIAIS
-===================================================== */
+/* REDES SOCIAIS */
 
 .footer-social {
   display: flex;
@@ -686,61 +495,38 @@ background:#10233d;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 48px;
   height: 48px;
-
   border-radius: 15px;
-
   background: rgba(255,255,255,0.04);
   border: 1px solid rgba(255,255,255,0.08);
-
   backdrop-filter: blur(12px);
-
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    border-color 0.35s ease,
-    box-shadow 0.35s ease;
+  transition: transform 0.35s ease, background 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
 .footer-social a:hover {
   transform: translateY(-5px) scale(1.05);
-
-  background: linear-gradient(
-    135deg,
-    rgba(100,255,218,0.18),
-    rgba(0,170,255,0.18)
-  );
-
+  background: linear-gradient( 135deg, rgba(100,255,218,0.18), rgba(0,170,255,0.18) );
   border-color: rgba(100,255,218,0.35);
-
   box-shadow: 0 0 25px rgba(100,255,218,0.18);
 }
 
 .footer-social img {
   display: block;
-
   width: 23px;
   height: 23px;
-
   object-fit: contain;
   filter: brightness(1.1);
 }
 
-/* =====================================================
-   FOOTER — COPYRIGHT RESPONSIVO
-===================================================== */
+/* FOOTER — COPYRIGHT RESPONSIVO */
 
 .footer-bottom {
   position: relative;
   z-index: 2;
-
   width: 100%;
   margin-top: 65px;
   padding-top: 25px;
-
-  /* Linha horizontal inteira */
   border-top: 1px solid rgba(255,255,255,0.15);
 }
 
@@ -748,19 +534,14 @@ background:#10233d;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
   align-items: center;
   justify-content: center;
-
   column-gap: 12px;
   row-gap: 6px;
-
   width: 100%;
   margin: 0;
   padding: 0;
-
   text-align: center;
-
   color: #8da2bb;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -785,9 +566,7 @@ background:#10233d;
 }
 
 .footer-copy a.nome-dev {
-  transition:
-    color 0.3s ease,
-    text-shadow 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
 .footer-copy a.nome-dev:hover {
@@ -795,12 +574,9 @@ background:#10233d;
   text-shadow: 0 0 15px rgba(100,255,218,0.4);
 }
 
-/* =====================================================
-   MONITORES GRANDES
-===================================================== */
+/* MONITORES GRANDES */
 
 @media (min-width: 1600px) {
-
   .footer-bottom {
     margin-top: 80px;
     padding-top: 30px;
@@ -810,15 +586,11 @@ background:#10233d;
     font-size: 0.95rem;
     column-gap: 16px;
   }
-
 }
 
-/* =====================================================
-   TABLETS
-===================================================== */
+/* TABLETS */
 
 @media (min-width: 651px) and (max-width: 1023px) {
-
   .footer-bottom {
     margin-top: 50px;
     padding-top: 24px;
@@ -827,15 +599,11 @@ background:#10233d;
   .footer-copy {
     font-size: 0.85rem;
   }
-
 }
 
-/* =====================================================
-   CELULARES
-===================================================== */
+/* CELULARES */
 
 @media (max-width: 650px) {
-
   .footer-bottom {
     margin-top: 40px;
     padding-top: 22px;
@@ -844,7 +612,6 @@ background:#10233d;
   .footer-copy {
     flex-direction: column;
     gap: 5px;
-
     font-size: 0.78rem;
     line-height: 1.7;
   }
@@ -853,15 +620,11 @@ background:#10233d;
     max-width: 100%;
     text-align: center;
   }
-
 }
 
-/* =====================================================
-   CELULARES PEQUENOS
-===================================================== */
+/* CELULARES PEQUENOS */
 
 @media (max-width: 390px) {
-
   .footer-bottom {
     margin-top: 32px;
     padding-top: 18px;
@@ -872,18 +635,14 @@ background:#10233d;
     line-height: 1.65;
     gap: 4px;
   }
-
 }
 
-/* ==========================================
-   CORREÇÃO FINAL — COPYRIGHT
-========================================== */
+/* CORREÇÃO FINAL — COPYRIGHT */
 
 .footer-bottom {
   width: 100%;
   margin-top: 65px;
   padding-top: 25px;
-
   border-top: 1px solid rgba(255,255,255,0.15);
 }
 
@@ -891,16 +650,12 @@ background:#10233d;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-
   justify-content: center;
   align-items: center;
-
   gap: 6px 12px;
-
   width: 100%;
   margin: 0;
   padding: 0;
-
   text-align: center;
   font-size: 0.9rem;
   line-height: 1.8;
@@ -909,7 +664,6 @@ background:#10233d;
 /* CELULARES */
 
 @media (max-width: 650px) {
-
   .footer-bottom {
     margin-top: 40px;
     padding-top: 20px;
@@ -918,35 +672,24 @@ background:#10233d;
   .footer-copy {
     flex-direction: column;
     gap: 4px;
-
     font-size: 0.78rem;
   }
-
 }
 
 /* CELULARES PEQUENOS */
 
 @media (max-width: 390px) {
-
   .footer-copy {
     font-size: 0.72rem;
     line-height: 1.7;
   }
-
 }
 
-/* ==========================================================
-   FOOTER — RESPONSIVIDADE FINAL
-   TABLET + CELULAR + CELULAR PEQUENO
-========================================================== */
+/* FOOTER — RESPONSIVIDADE FINAL TABLET + CELULAR + CELULAR PEQUENO */
 
-/* ==========================================================
-   TABLET HORIZONTAL
-   769px até 1023px
-========================================================== */
+/* TABLET HORIZONTAL 769px até 1023px */
 
 @media (min-width: 769px) and (max-width: 1023px) {
-
   .footer {
     padding: 70px 5% 30px;
   }
@@ -996,9 +739,7 @@ background:#10233d;
     gap: 10px;
   }
 
-  .footer-links a,
-  .footer-contact p,
-  .footer-contact span {
+  .footer-links a, .footer-contact p, .footer-contact span {
     font-size: 0.9rem;
   }
 
@@ -1025,13 +766,9 @@ background:#10233d;
   }
 }
 
-/* ==========================================================
-   TABLET VERTICAL
-   651px até 768px
-========================================================== */
+/* TABLET VERTICAL 651px até 768px */
 
 @media (min-width: 651px) and (max-width: 768px) {
-
   .footer {
     padding: 65px 6% 28px;
   }
@@ -1080,9 +817,7 @@ background:#10233d;
     gap: 8px;
   }
 
-  .footer-links a,
-  .footer-contact p,
-  .footer-contact span {
+  .footer-links a, .footer-contact p, .footer-contact span {
     font-size: 0.88rem;
   }
 
@@ -1109,13 +844,9 @@ background:#10233d;
   }
 }
 
-/* ==========================================================
-   CELULAR NORMAL
-   391px até 650px
-========================================================== */
+/* CELULAR NORMAL 391px até 650px */
 
 @media (min-width: 391px) and (max-width: 650px) {
-
   .footer {
     padding: 50px 5% 24px;
   }
@@ -1198,8 +929,7 @@ background:#10233d;
     gap: 6px;
   }
 
-  .footer-contact p,
-  .footer-contact span {
+  .footer-contact p, .footer-contact span {
     font-size: 0.82rem;
     line-height: 1.5;
   }
@@ -1246,7 +976,6 @@ background:#10233d;
     align-items: center;
     justify-content: center;
     gap: 5px;
-
     width: 100%;
     font-size: 0.78rem;
     line-height: 1.7;
@@ -1259,13 +988,9 @@ background:#10233d;
   }
 }
 
-/* ==========================================================
-   CELULAR PEQUENO
-   321px até 390px
-========================================================== */
+/* CELULAR PEQUENO 321px até 390px */
 
 @media (min-width: 321px) and (max-width: 390px) {
-
   .footer {
     padding: 45px 5% 20px;
   }
@@ -1348,8 +1073,7 @@ background:#10233d;
     gap: 5px;
   }
 
-  .footer-contact p,
-  .footer-contact span {
+  .footer-contact p, .footer-contact span {
     font-size: 0.77rem;
     line-height: 1.5;
   }
@@ -1395,7 +1119,6 @@ background:#10233d;
     flex-direction: column;
     align-items: center;
     gap: 4px;
-
     width: 100%;
     font-size: 0.72rem;
     line-height: 1.7;
@@ -1409,13 +1132,9 @@ background:#10233d;
   }
 }
 
-/* ==========================================================
-   CELULAR MUITO PEQUENO
-   ATÉ 320px
-========================================================== */
+/* CELULAR MUITO PEQUENO ATÉ 320px */
 
 @media (max-width: 320px) {
-
   .footer {
     padding: 40px 5% 18px;
   }
@@ -1480,8 +1199,7 @@ background:#10233d;
     gap: 4px;
   }
 
-  .footer-contact p,
-  .footer-contact span {
+  .footer-contact p, .footer-contact span {
     font-size: 0.73rem;
   }
 
@@ -1536,12 +1254,9 @@ background:#10233d;
   }
 }
 
-/* ==========================================================
-   AJUSTES GERAIS PARA TOUCH
-========================================================== */
+/* AJUSTES GERAIS PARA TOUCH */
 
 @media (hover: none) {
-
   .footer-links a:hover {
     transform: none;
   }
