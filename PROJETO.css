@@ -1,3 +1,121 @@
+/* ESTILOS DO HERO TRANSFERIDOS DO STYLE.CSS */
+/* HEADER — FUNDO COM VÍDEOS */
+
+header {
+  position: relative;
+  padding: 70px 20px;
+  text-align: center;
+  overflow: hidden;
+  background: #06101d;
+}
+
+/* CONTAINER DOS VÍDEOS */
+
+.hero-videos {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* VÍDEOS */
+
+.hero-video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  object-fit: cover;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* VÍDEO ATIVO */
+
+.hero-video.ativo {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* OVERLAY DO FUNDO */
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient( 135deg, rgba(6,16,29,0.20), rgba(8,17,32,0.65) );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* CONTEÚDO ACIMA DOS VÍDEOS */
+
+header > *:not(.hero-videos) {
+  position: relative;
+  z-index: 2;
+}
+
+/* TYPING TEXT */
+
+.typing-text {
+  display: block;
+  width: 100%;
+  max-width: 900px;
+  margin: 25px auto 0;
+  padding: 0 10px;
+  font-size: 1rem;
+  font-family: "Archivo Black",sans-serif;
+  color: white;
+  line-height: 1.6;
+  text-align: center;
+  white-space: normal;
+  overflow: visible;
+  border-right: none;
+}
+
+.typing-text::after {
+  content: none;
+}
+
+.typing-text .typing-content {
+  display: inline;
+}
+
+.typing-text .typing-final {
+  white-space: nowrap;
+}
+
+
+.typing-text .typing-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    margin-left: 5px;
+    vertical-align: -0.15em;
+    background: #4BAFC7;
+    opacity: 0.8;
+    box-shadow: none !important;
+    filter: none !important;
+    text-shadow: none !important;
+    animation: piscar-cursor 0.7s infinite;
+}
+
+/* CURSOR */
+
+
+@keyframes piscar-cursor {
+    0%, 100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+
+
 h2 {
   font-size: 2rem !important;
 }
@@ -3961,4 +4079,184 @@ h2 {
     height: auto;
     border-radius: 12px;
   }
+}
+
+/* HERO RESPONSIVO - DESKTOP */
+@media (min-width: 1024px) {
+
+    .hero {
+        min-height: 100svh;
+        height: auto;
+        padding: 75px 0 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    /* NAVEGAÇÃO */
+    .hero .navbar {
+        position: absolute;
+        top: 12px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 0;
+        transform: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 100;
+    }
+
+    .hero .nav-links {
+        position: static;
+        margin: 0;
+        border-radius: 0 20px 20px 0;
+    }
+
+    .hero .top-actions {
+        position: static;
+        margin: 0 0 0 auto;
+    }
+
+    .hero .software-link {
+        border-radius: 20px 0 0 20px;
+    }
+
+    /* CONTEÚDO PRINCIPAL */
+    .hero .hero-container {
+        position: relative;
+        width: 100%;
+        max-width: 1100px;
+        min-height: calc(100svh - 90px);
+        margin: 0 auto;
+        padding: 0 20px 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+    }
+
+    /* LOGO E TÍTULO */
+    .hero .hero-title {
+        position: relative;
+        top: -20px;
+        transform: none;
+        margin: 0 0 30px !important;
+        gap: 15px;
+    }
+
+    .hero .hero-logo img {
+        width: clamp(65px, 9vh, 90px) !important;
+        height: clamp(65px, 9vh, 90px) !important;
+        min-width: 0 !important;
+        max-width: none !important;
+    }
+
+    .hero .hero-title h1,
+    .hero .hero-container h1 {
+        font-size: clamp(2rem, 3.4vw, 3.5rem) !important;
+        line-height: 1.15;
+    }
+
+    /* FRASE ANIMADA */
+    .hero .typing-text {
+        position: relative;
+        top: -20px;
+        width: 100%;
+        max-width: 650px;
+        height: 85px;
+        min-height: 85px;
+        max-height: 85px;
+        margin: 0 auto !important;
+        padding: 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        overflow: hidden;
+    }
+
+    /* BOTÕES PRINCIPAIS */
+    .hero .hero-buttons {
+        position: relative;
+        top: -20px;
+        flex-shrink: 0;
+        margin: 30px auto 0 !important;
+        margin-bottom: 0;
+        gap: 16px;
+        justify-content: center;
+    }
+
+    .hero .hero-buttons a {
+        padding: 12px 24px;
+        font-size: 0.88rem;
+    }
+
+    /* CARDS DOS INDICADORES */
+    .hero .hero-stats {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: clamp(10px, 2vw, 20px);
+        margin: 0 !important;
+        padding: 0;
+        width: max-content;
+        max-width: 100%;
+    }
+
+    .hero .hero-stat {
+        min-width: 0;
+        width: clamp(115px, 12vw, 150px);
+        min-height: 0;
+        padding: clamp(12px, 2vh, 20px);
+    }
+
+    .hero .hero-stat h3 {
+        font-size: clamp(1.4rem, 2.5vw, 2rem);
+    }
+
+    .hero .hero-stat p {
+        font-size: clamp(0.7rem, 0.85vw, 0.85rem);
+    }
+}
+
+/* AJUSTES PARA TELAS MAIS BAIXAS */
+@media (min-width: 1024px) and (max-height: 750px) {
+
+    .hero .typing-text {
+        height: 65px;
+        min-height: 65px;
+        max-height: 65px;
+    }
+
+    .hero .hero-stat {
+        padding: 12px;
+    }
+
+}
+
+/* CURSOR AZUL MAIS VISÍVEL */
+.typing-text .typing-cursor,
+.typing-text .cursor {
+    background-color: #00d9ff;
+    width: 3px;
+    box-shadow: 0 0 8px #00d9ff,
+                0 0 15px #00d9ff;
+}
+
+@keyframes piscar-cursor {
+    0%, 100% {
+        opacity: 1;
+    }
 }

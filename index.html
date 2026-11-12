@@ -78,7 +78,7 @@
 
     <!-- BOTÃO DE SOFTWARES -->
 
-<!--<div class="top-actions">
+<div class="top-actions">
 
         <div class="dropdown" id="dropdown-softwares">
 
@@ -106,7 +106,7 @@
 
         </div>
 
-    </div>-->
+    </div>
 
 </nav>
 
@@ -126,9 +126,7 @@
 
     </div>
 
-    <p class="typing-text">
-      Transformando dados ambientais em soluções para um futuro mais sustentável.
-    </p>
+    <p class="typing-text"><span class="typing-content"></span></p>
 
     <div class="hero-buttons">
 
@@ -3605,7 +3603,7 @@ const frases = [
 
 const elemento =
   document.querySelector(
-    ".typing-text"
+    ".typing-text .typing-content"
   );
 
 
@@ -3614,6 +3612,29 @@ let fraseIndex = 0;
 let letraIndex = 0;
 
 let apagando = false;
+
+// Mantém a última letra e o cursor juntos, inclusive nas quebras de linha.
+function atualizarDigitacao(texto) {
+  if (!elemento) return;
+  elemento.replaceChildren();
+  if (!texto) {
+    const cursor = document.createElement("span");
+    cursor.className = "typing-cursor";
+    cursor.setAttribute("aria-hidden", "true");
+    elemento.append(cursor);
+    return;
+  }
+  elemento.append(document.createTextNode(texto.slice(0, -1)));
+  const final = document.createElement("span");
+  final.className = "typing-final";
+  final.append(document.createTextNode(texto.slice(-1)));
+  const cursor = document.createElement("span");
+  cursor.className = "typing-cursor";
+  cursor.setAttribute("aria-hidden", "true");
+  final.append(cursor);
+  elemento.append(final);
+}
+
 
 
 function digitar() {
@@ -3627,11 +3648,7 @@ function digitar() {
 
   if (!apagando) {
 
-    elemento.textContent =
-      fraseAtual.substring(
-        0,
-        letraIndex + 1
-      );
+    atualizarDigitacao(fraseAtual.substring(0, letraIndex + 1));
 
 
     letraIndex++;
@@ -3655,11 +3672,7 @@ function digitar() {
 
   } else {
 
-    elemento.textContent =
-      fraseAtual.substring(
-        0,
-        letraIndex - 1
-      );
+    atualizarDigitacao(fraseAtual.substring(0, letraIndex - 1));
 
 
     letraIndex--;
