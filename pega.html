@@ -4,24 +4,25 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
   <link rel="stylesheet" href="PEGA.css">
   <title>Pega | Webpage</title>
-  <link rel="shortcut icon" href="imgs/logo-atu.png" type="image/x-icon">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="shortcut icon" href="imgs/Logo-Pega.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="imgs/logo-img.png" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-Motor Computacional<body>
+<body>
 <!-- NAVBAR -->
 <nav class="navbar">
 
     <div class="logo">
-        <img src="gifs/animacao-pega.gif" alt="Logo PEGA">
+        <img src="imgs/logo-img.png" alt="Logo PEGA">
         <span>PEGA</span>
     </div>
     <ul class="nav-links">
@@ -29,9 +30,7 @@ Motor Computacional<body>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#funcionamento">Funcionamento</a></li>
         <li><a href="#documentacao">Documentação</a></li>
-        <li><a href="#futuras-implementacoes">Futuras Implementações</a></li>
         <li><a href="#equipe">Equipe</a></li>
-        <li><a href="#contato">Contato</a></li>
     </ul>
 
 </nav>
@@ -41,30 +40,28 @@ Motor Computacional<body>
 
     <div class="hero-content">
 
-        <span class="badge">
-            Software Científico para Estudos Atmosféricos
-        </span>
-
         <h1>PEGA</h1>
-
+<br>
+        <span class="badge">
+            (Poluição, Emissão e Gases na Atmosfera)
+        </span>
         <h2>
             Plataforma de Estudos e Gestão Atmosférica
         </h2>
 
         <p>
-            Ferramenta desenvolvida para análise, modelagem e processamento
-            de dados atmosféricos, fornecendo suporte científico para pesquisas
-            sobre qualidade do ar, emissões e impactos ambientais.
+            Plataforma científica para elaboração de inventários de emissões atmosféricas, integrando cálculo de emissões, especiação química, distribuição temporal e espacial, visualização interativa de resultados e geração de dados para modelagem da qualidade do ar.
         </p>
 
         <div class="hero-buttons">
 
-            <a href="#sobre" class="btn-primary">
-                Conhecer o Software
+            <a class="pega-button pega-button--primary"
+                href="https://pega.projetoozoniomover.org/" target="_blank" rel="noopener noreferrer"
+                aria-label="Acessar software (abre em nova aba)">
+                Acessar software<span class="pega-button-icon" aria-hidden="true">&#8599;</span>
             </a>
-
-            <a href="#documentacao" class="btn-secondary">
-                Ver Documentação
+            <a class="pega-button pega-button--secondary" href="#documentacao">
+                Explorar documentação
             </a>
 
         </div>
@@ -72,10 +69,10 @@ Motor Computacional<body>
     </div>
 
     <div class="hero-gif">
-
-        <img src="gifs/pega-acenandofeliz.gif"
-            alt="Modelo 3D do PEGA">
-
+        <video autoplay loop muted playsinline
+            aria-label="Modelo 3D do PEGA">
+            <source src="gifs/Pega-Feliz.mp4" type="video/mp4">
+        </video>
     </div>
 
 </section>
@@ -90,34 +87,36 @@ Motor Computacional<body>
 
             <h2>O que é o PEGA?</h2>
 
-            <p>
-                O PEGA (Plataforma de Estudos e Gestão Atmosférica) é um software científico
-                desenvolvido para análise, modelagem e processamento de dados atmosféricos.
-                Ele foi criado com o objetivo de apoiar pesquisas ambientais, permitindo
-                a interpretação avançada de dados relacionados à qualidade do ar e poluição atmosférica.
-            </p>
+<p>
+    O PEGA (Poluição, Emissão e Gases na Atmosfera) é um software científico
+    desenvolvido com o objetivo de facilitar e automatizar a elaboração de
+    inventários de emissões atmosféricas, permitindo estimar, analisar e
+    compreender a distribuição de poluentes na atmosfera.
+</p>
 
-            <p>
-                Seu principal objetivo científico é fornecer uma ferramenta computacional capaz de
-                transformar grandes volumes de dados atmosféricos em informações úteis para
-                universidades, pesquisadores e instituições ambientais.
-            </p>
+<p>
+    A plataforma busca auxiliar pesquisadores, estudantes, universidades
+    e instituições ambientais em estudos sobre emissões e qualidade do ar.
+    Por meio da geração de gráficos, mapas interativos, relatórios e arquivos
+    para modelagem atmosférica, o PEGA contribui para tornar as pesquisas
+    científicas mais acessíveis, eficientes e reprodutíveis.
+</p>
 
             <div class="sobre-destaques">
 
                 <div class="destaque">
-                    <h3>📊 Análise</h3>
-                    <p>Processamento avançado de dados atmosféricos.</p>
+                    <h3>Inventários</h3>
+                    <p>Cálculo de emissões atmosféricas e especiação química.</p>
                 </div>
 
                 <div class="destaque">
-                    <h3>🌍 Ambiente</h3>
-                    <p>Foco em poluição e qualidade do ar.</p>
+                    <h3>Distribuição</h3>
+                    <p>Distribuição temporal e espacial com visualizações interativas.</p>
                 </div>
 
                 <div class="destaque">
-                    <h3>⚙️ Ciência</h3>
-                    <p>Baseado em métodos estatísticos e computacionais.</p>
+                    <h3>Modelagem</h3>
+                    <p>Geração de dados para integração com modelos atmosféricos.</p>
                 </div>
 
             </div>
@@ -126,7 +125,33 @@ Motor Computacional<body>
 
         <div class="sobre-visual">
 
-            <img src="gifs/globo-girando.gif" alt="PEGA Visual" class="sobre-gif">
+            <article class="pega-demo-map" aria-labelledby="pega-demo-map-title" data-demo-src="data/tpp_biomassa_2017_demo.txt">
+                <header class="pega-demo-map-header">
+                    <h3 id="pega-demo-map-title">Distribuição espacial de emissões</h3>
+                    <p>Carbono Negro (BC) · Biomassa</p>
+                </header>
+                <div class="pega-demo-map-frame">
+                    <div class="pega-demo-map-container" role="region" aria-label="Mapa interativo do Brasil"></div>
+                    <div class="pega-demo-map-controls" hidden>
+                        <button type="button" data-map-reset title="Restaurar visualização" aria-label="Restaurar visualização">
+                            <i class="fa-solid fa-rotate-left" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" data-map-expand title="Tela inteira" aria-label="Tela inteira" aria-pressed="false">
+                            <i class="fa-solid fa-expand" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="pega-demo-map-info">
+                    <div class="pega-demo-map-legend" hidden>
+                        <strong>Emissões simuladas de BC (g)</strong>
+                        <div class="pega-demo-map-gradient" aria-hidden="true"></div>
+                        <div class="pega-demo-map-values"><span data-map-min></span><span data-map-max></span></div>
+                    </div>
+                    <p class="pega-demo-map-status" role="status">Carregando mapa demonstrativo…</p>
+                    <p class="pega-demo-map-disclaimer">Dados fictícios utilizados exclusivamente para fins demonstrativos.</p>
+                    <noscript>Ative o JavaScript para explorar o mapa.</noscript>
+                </div>
+            </article>
 
         </div>
 
@@ -134,133 +159,528 @@ Motor Computacional<body>
 
 </section>
 
-<section id="funcionamento" class="funcionamento">
-    <div class="func-particulas"></div>
+<section id="funcionamento" class="funcionamento" aria-labelledby="pega-flow-title">
+    <div class="func-particulas" aria-hidden="true"></div>
     <div class="funcionamento-header">
-
         <span class="tag-func">Como Funciona</span>
-
-        <h2>Fluxo de Processamento do PEGA</h2>
-
-        <p>
-            O PEGA transforma dados atmosféricos brutos em informações científicas
-            através de um pipeline computacional baseado em análise estatística em R.
-        </p>
-
+        <h2 id="pega-flow-title">Fluxo de Processamento do PEGA</h2>
+        <p>O PEGA integra todas as etapas da elaboração de inventários de emissões atmosféricas, desde a entrada e validação dos dados até a geração de resultados científicos e arquivos para modelagem da qualidade do ar.</p>
     </div>
 
-    <div class="pipeline">
-        <div class="data-flow"></div>
-        <div class="data-flow delay1"></div>
-        <div class="data-flow delay2"></div>
-        <!-- ETAPA 1 -->
-        <div class="step">
-
-            <img src="imgs/processamento/entradadedados.jpg" alt="Sensores ambientais" class="step-img">
-
-            <h3>Entrada de Dados</h3>
-
-            <p>
-                Coleta de dados de sensores ambientais, estações meteorológicas e bancos de dados atmosféricos.
-            </p>
-
-        </div>
-
-        <!-- ETAPA 2 -->
-        <div class="step">
-
-            <img src="imgs/processamento/processaemento.png" alt="Processamento em R" class="step-img">
-
-            <h3>Processamento em R</h3>
-
-            <p>
-                Aplicação de métodos estatísticos, limpeza de dados e modelagem computacional utilizando linguagem R.
-            </p>
-
-        </div>
-
-        <!-- ETAPA 3 -->
-        <div class="step">
-
-            <img src="imgs/processamento/resultados.jpg" alt="Resultados e relatórios" class="step-img">
-
-            <h3>Resultados</h3>
-
-            <p>
-                Geração de gráficos, relatórios e insights científicos sobre qualidade do ar e poluição atmosférica.
-            </p>
-
-        </div>
-
+    <div class="pega-flow">
+        <svg class="pega-flow-track" aria-hidden="true" focusable="false">
+            <defs>
+                <linearGradient id="pega-flow-gradient" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#0f5da6" />
+                    <stop offset=".5" stop-color="#009fbc" />
+                    <stop offset="1" stop-color="#20a969" />
+                </linearGradient>
+            </defs>
+            <path class="pega-flow-path" fill="none" stroke="url(#pega-flow-gradient)" />
+            <g class="pega-flow-particles" visibility="hidden">
+                <circle r="3.5" />
+                <circle r="3.5" />
+                <circle r="3.5" />
+                <circle r="3.5" />
+                <circle r="3.5" />
+                <circle r="3.5" />
+            </g>
+        </svg>
+        <ol class="pega-flow-grid" role="list">
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-file-arrow-up"></i>
+                        <span>01</span>
+                    </div>
+                    <h3>Entrada de dados</h3>
+                    <p>Carregamento da planilha de dados de atividade nos formatos CSV, TXT ou XLSX.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-file-circle-check"></i>
+                        <span>02</span>
+                    </div>
+                    <h3>Validação dos dados</h3>
+                    <p>Verificação automática do formato, das colunas e da consistência das informações fornecidas.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-gears"></i>
+                        <span>03</span>
+                    </div>
+                    <h3>Processamento do inventário</h3>
+                    <p>Após a validação dos dados, o PEGA executa automaticamente as etapas de cálculo do inventário.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-calculator"></i>
+                        <span>04</span>
+                    </div>
+                    <h3>Cálculo de emissões</h3>
+                    <p>Aplicação dos fatores de emissão, utilizando a metodologia Tier 1, para estimar as emissões por poluente.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-flask"></i>
+                        <span>05</span>
+                    </div>
+                    <h3>Especiação química</h3>
+                    <p>Distribuição das emissões entre as espécies químicas utilizadas pelo modelo atmosférico.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-clock"></i>
+                        <span>06</span>
+                    </div>
+                    <h3>Distribuição temporal</h3>
+                    <p>Aplicação de perfis temporais semanais e horários às emissões calculadas.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-table-cells"></i>
+                        <span>07</span>
+                    </div>
+                    <h3>Distribuição espacial</h3>
+                    <p>Distribuição geográfica das emissões sobre a grade computacional do WRF.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-file-code"></i>
+                        <span>08</span>
+                    </div>
+                    <h3>Geração de arquivos</h3>
+                    <p>Criação de arquivos no formato NetCDF (.nc) para integração com o WRF-Chem.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-file-excel"></i>
+                        <span>09</span>
+                    </div>
+                    <h3>Geração de relatórios</h3>
+                    <p>Produção de planilhas CSV e tabelas de diagnóstico do inventário de emissões.</p>
+                </article>
+            </li>
+            <li class="pega-flow-step">
+                <article class="pega-flow-card">
+                    <div class="pega-flow-card-top" aria-hidden="true">
+                        <i class="fa-solid fa-chart-column"></i>
+                        <span>10</span>
+                    </div>
+                    <h3>Gráficos e mapas</h3>
+                    <p>Visualização dos resultados por meio de gráficos científicos e mapas de distribuição espacial.</p>
+                </article>
+            </li>
+        </ol>
     </div>
-
 </section>
 
-<section id="documentacao" class="documentacao">
-    <div class="doc-particulas"></div>
-    <div class="container">
-
-        <!-- HEADER -->
-        <div class="doc-header">
-
-            <span class="tag-doc">
-                Documentação do Software
-            </span>
-
-            <h2>
-                Instalação, Execução e Estrutura de Uso
-            </h2>
-
-            <p>
-                Guia completo para instalação, configuração e utilização do PEGA
-                em ambientes acadêmicos e científicos.
-            </p>
-
+<section id="documentacao" class="documentacao" aria-labelledby="doc-title">
+    <div class="doc-particulas" aria-hidden="true"></div>
+    <div class="doc-shell">
+        <header class="doc-header">
+            <span class="tag-doc">Documentação do Software</span>
+            <h2 id="doc-title">Explore a tecnologia por trás do PEGA</h2>
+            <p>Conheça a arquitetura, as metodologias científicas, as tecnologias e os recursos que tornam o PEGA uma plataforma integrada para elaboração de inventários de emissões atmosféricas.</p>
+            <div class="doc-actions">
+                <a class="doc-button doc-primary" href="https://pega.projetoozoniomover.org/" target="_blank" rel="noopener noreferrer">Acessar o PEGA <span aria-hidden="true">↗</span></a>
+                <a class="doc-button" href="#doc-conteudo">Explorar documentação</a>
+                <a class="doc-button" href="#funcionamento">Ver fluxo de processamento</a>
+            </div>
+            <ul class="doc-indicators"><li>Acesso gratuito</li><li>Disponível na web</li><li>Aplicação científica</li><li>Integração com WRF-Chem</li></ul>
+        </header>
+        <div class="doc-layout" id="doc-conteudo" data-doc-tabs>
+            <aside class="doc-sidebar">
+                <label class="doc-picker" hidden>Assunto da documentação <select></select></label>
+                <nav aria-label="Assuntos da documentação">
+                    <a href="#doc-visao"><span aria-hidden="true">01</span>Visão geral</a>
+                    <a href="#doc-tecnologias"><span aria-hidden="true">02</span>Tecnologias utilizadas</a>
+                    <a href="#doc-uso"><span aria-hidden="true">03</span>Como utilizar o PEGA</a>
+                    <a href="#doc-entrada"><span aria-hidden="true">04</span>Dados de entrada</a>
+                    <a href="#doc-metodologia"><span aria-hidden="true">05</span>Metodologia científica</a>
+                    <a href="#doc-temporal"><span aria-hidden="true">06</span>Distribuição temporal</a>
+                    <a href="#doc-espacial"><span aria-hidden="true">07</span>Distribuição espacial</a>
+                    <a href="#doc-visualizacoes"><span aria-hidden="true">08</span>Visualizações científicas</a>
+                    <a href="#doc-exportacoes"><span aria-hidden="true">09</span>Relatórios e exportações</a>
+                    <a href="#doc-arquitetura"><span aria-hidden="true">10</span>Arquitetura do software</a>
+                    <a href="#doc-hospedagem"><span aria-hidden="true">11</span>Hospedagem e publicação</a>
+                    <a href="#doc-limites"><span aria-hidden="true">12</span>Recomendações</a>
+                </nav>
+            </aside>
+            <div class="doc-reading">
+                <section id="doc-visao" class="doc-topic" data-doc-panel aria-labelledby="doc-visao-title">
+                    <h3 id="doc-visao-title">Visão geral</h3>
+                    <p>O PEGA é uma plataforma científica desenvolvida para facilitar e automatizar a elaboração de inventários de emissões atmosféricas. O software transforma dados de atividade em estimativas de emissões, aplica metodologias de especiação química e distribuição temporal e espacial, permitindo a geração de resultados destinados à análise ambiental e à modelagem atmosférica.</p>
+                    <h4>Público e aplicações</h4>
+                    <p>O PEGA (Poluição, Emissão e Gases na Atmosfera) auxilia pesquisadores, estudantes, universidades, instituições ambientais, profissionais de modelagem atmosférica e grupos de pesquisa em qualidade do ar.</p>
+                    <ol class="doc-diagram"><li>Importação e validação</li><li>Cálculo e especiação</li><li>Distribuição temporal e espacial</li><li>Visualização e exportação</li></ol>
+                    <p class="doc-note">O PEGA prepara inventários e arquivos de entrada. A simulação atmosférica é executada pelo WRF-Chem.</p>
+                </section>
+                <section id="doc-tecnologias" class="doc-topic" data-doc-panel aria-labelledby="doc-tecnologias-title">
+                    <h3 id="doc-tecnologias-title">Tecnologias utilizadas</h3>
+                    <p>A vitrine descreve a arquitetura informada pelo projeto. HTML, CSS, JavaScript e Leaflet estão confirmados nesta página institucional.</p>
+                    <h4>Linguagens e interface</h4>
+                    <ul class="doc-tech"><li><span class="doc-brand doc-brand-python" aria-hidden="true"></span>
+                    <div><strong>Python</strong>
+                    <p>Motor científico, cálculo e tratamento de dados.</p></div></li><li><i class="fa-brands fa-html5" aria-hidden="true"></i>
+                    <div><strong>HTML5</strong>
+                    <p>Estrutura da interface.</p></div></li><li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
+                    <div><strong>CSS3</strong>
+                    <p>Estilo e responsividade.</p></div></li><li><i class="fa-brands fa-js" aria-hidden="true"></i>
+                    <div><strong>JavaScript</strong>
+                    <p>Interações e comunicação com a API.</p></div></li></ul>
+                    <h4>Framework e servidor</h4>
+                    <ul class="doc-tech"><li><span class="doc-brand doc-brand-fastapi" aria-hidden="true"></span>
+                    <div><strong>FastAPI</strong>
+                    <p>Interface entre a aplicação web e o backend.</p></div></li><li><span class="doc-brand doc-brand-uvicorn" aria-hidden="true"></span>
+                    <div><strong>Uvicorn</strong>
+                    <p>Servidor ASGI.</p></div></li></ul>
+                    <h4>Infraestrutura</h4>
+                    <ul class="doc-tech"><li><i class="fa-brands fa-docker" aria-hidden="true"></i>
+                    <div><strong>Docker</strong>
+                    <p>Empacota a aplicação e suas dependências.</p></div></li><li><i class="fa-brands fa-git-alt" aria-hidden="true"></i>
+                    <div><strong>Git</strong>
+                    <p>Controle de versão.</p></div></li><li><i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <div><strong>GitHub</strong>
+                    <p>Hospedagem de código e integração de publicação.</p></div></li></ul>
+                    <h4>Biblioteca geográfica</h4>
+                    <ul class="doc-tech"><li><span class="doc-brand doc-brand-leaflet" aria-hidden="true"></span>
+                    <div><strong>Leaflet</strong>
+                    <p>Presente no mapa interativo do website institucional.</p></div></li></ul>
+                    <h4>Formato de dados e integração científica</h4>
+                    <ul class="doc-tech"><li>
+                    <div><strong>NetCDF</strong>
+                    <p>Formato multidimensional para dados científicos.</p></div></li><li>
+                    <div><strong>WRF-Chem</strong>
+                    <p>Modelo que pode ler arquivos de emissões preparados pelo PEGA.</p></div></li></ul>
+                    <h4>Bibliotecas científicas e computacionais</h4>
+                    <p>Os serviços científicos lidam com manipulação tabular e numérica, projeções e geometrias, visualização, arquivos multidimensionais e infraestrutura web.</p>
+                    <p class="doc-note">Os imports e o requirements.txt do backend Python não estão disponíveis neste repositório. A identificação de pacotes e versões está pendente.</p>
+                </section>
+                <section id="doc-uso" class="doc-topic" data-doc-panel aria-labelledby="doc-uso-title">
+                    <h3 id="doc-uso-title">Como utilizar o PEGA</h3>
+                    <p>O PEGA está disponível gratuitamente na web. Para utilizar a versão online, não é necessário instalar Python, Docker ou qualquer ambiente de desenvolvimento.</p><a class="doc-button doc-primary" href="https://pega.projetoozoniomover.org/" target="_blank" rel="noopener noreferrer">Acessar o PEGA <span aria-hidden="true">↗</span></a>
+                    <ol><li>Abra a plataforma e prepare uma planilha com os dados de atividade.</li><li>Envie o arquivo em formato suportado e revise a identificação e a validação das colunas.</li><li>Configure os parâmetros disponíveis e execute o inventário.</li><li>Explore os resultados e, conforme os recursos disponíveis, realize a distribuição temporal e espacial.</li><li>Revise os gráficos, consulte os mapas e exporte os resultados desejados.</li></ol><a href="#funcionamento">Conheça todas as etapas do processamento</a>
+                </section>
+                <section id="doc-entrada" class="doc-topic" data-doc-panel aria-labelledby="doc-entrada-title">
+                    <h3 id="doc-entrada-title">Dados de entrada</h3>
+                    <p>CSV, TXT tabular e XLSX são os formatos previstos na metodologia descrita. A lista de formatos e aliases aceitos pela revisão Python aguarda confirmação.</p>
+                    <div class="doc-table" tabindex="0" role="region" aria-label="Tabela técnica"><table><thead><tr><th scope="col">Campo</th><th scope="col">Descrição</th><th scope="col">Unidade ou formato</th></tr></thead><tbody><tr><td><code>ID</code></td><td>Identificador da fonte emissora ou usina</td><td>Texto</td></tr><tr><td><code>Fuel_type</code></td><td>Tipo de combustível utilizado</td><td>Texto</td></tr><tr><td><code>Granted_power_MW</code></td><td>Potência autorizada da usina</td><td>MW</td></tr><tr><td><code>latitude</code></td><td>Latitude</td><td>Graus decimais</td></tr><tr><td><code>longitude</code></td><td>Longitude</td><td>Graus decimais</td></tr><tr><td><code>year</code></td><td>Ano de referência</td><td>AAAA</td></tr><tr><td><code>Fuel_consumed_plant_GJ</code></td><td>Consumo de combustível</td><td>GJ</td></tr></tbody></table></div>
+                    <p>O consumo em GJ fornece o dado de atividade da equação Tier 1. A potência autorizada em MW é um atributo da fonte.</p>
+                    <details><summary>Ver exemplo de planilha</summary>
+                    <div class="doc-table doc-table-sample" tabindex="0" role="region" aria-label="Exemplo de planilha de entrada"><table><thead><tr><th scope="col">ID</th><th scope="col">Fuel_type</th><th scope="col">Granted_power_MW</th><th scope="col">latitude</th><th scope="col">longitude</th><th scope="col">year</th><th scope="col">Fuel_consumed_plant_GJ</th></tr></thead><tbody><tr><td>1</td><td>Biomass_thermal</td><td>12</td><td>-15.00</td><td>-49.00</td><td>2017</td><td>10000</td></tr><tr><td>2</td><td>Biomass_thermal</td><td>8</td><td>-10.00</td><td>-45.00</td><td>2017</td><td>8000</td></tr><tr><td>3</td><td>Biomass_thermal</td><td>20</td><td>-18.00</td><td>-55.00</td><td>2017</td><td>15000</td></tr></tbody></table></div>
+                    <p class="doc-note">Dados fictícios utilizados exclusivamente para fins demonstrativos.</p></details>
+                    <details><summary>Identificação das colunas</summary>
+                    <p>O roteiro prevê normalizar cabeçalhos, reconhecer aliases, localizar campos obrigatórios, desconsiderar colunas adicionais e identificar ambiguidades, duplicidades, anos e combustíveis disponíveis.</p>
+                    <div class="doc-table" tabindex="0" role="region" aria-label="Tabela técnica"><table><thead><tr><th scope="col">Campo</th><th scope="col">Exemplos de aliases</th></tr></thead><tbody><tr><td>ID</td><td>id_usina, plant_id, identificador</td></tr><tr><td>Fuel_type</td><td>combustível, fuel</td></tr><tr><td>latitude</td><td>lat</td></tr><tr><td>longitude</td><td>lon, lng</td></tr><tr><td>year</td><td>ano</td></tr><tr><td>Fuel_consumed_plant_GJ</td><td>consumo_gj</td></tr></tbody></table></div></details>
+                    <details><summary>Validação dos registros</summary>
+                    <p>Latitude entre −90° e 90°, longitude entre −180° e 180°, ano com quatro dígitos, valores numéricos finitos, campos obrigatórios preenchidos e consumo e potência não negativos na importação. O cálculo exige consumo positivo. A qualidade científica exige revisão da origem e da veracidade dos dados.</p></details>
+                </section>
+                <section id="doc-metodologia" class="doc-topic" data-doc-panel aria-labelledby="doc-metodologia-title">
+                    <h3 id="doc-metodologia-title">Metodologia científica</h3>
+                    <p>As equações abaixo seguem a descrição da metodologia original em R fornecida no briefing.</p>
+                    <h4>Cálculo de emissões · Tier 1</h4>
+                    <p class="doc-formula">E<sub>i,p</sub> = A<sub>i</sub> × FE<sub>p</sub></p>
+                    <p>E é a emissão do poluente p para a fonte i, A é o consumo em GJ e FE é o fator selecionado conforme setor, combustível e poluente. Um fator em g/GJ produz massa em gramas. Na abordagem <dfn class="doc-tooltip" tabindex="0" aria-describedby="doc-tip-tier">Tier 1<span role="tooltip" id="doc-tip-tier">Estimativa baseada em dados de atividade e fatores de emissão de referência.</span></dfn>, a seleção do fator determina a adequação da estimativa. O procedimento original filtrava também a ausência de região específica e o tipo Tier 1 Emission Factor.</p>
+                    <div class="doc-calculator">
+                    <h4>Calculadora demonstrativa</h4>
+                    <p>10.000 GJ × 2,5 g/GJ = 25.000 g = 25 kg. O fator é fictício.</p>
+                    <div class="doc-inputs" hidden><label>Consumo (GJ)<input type="number" min="0" step="any" value="10000"></label><label>Fator de emissão (g/GJ)<input type="number" min="0" step="any" value="2.5"></label></div><output aria-live="polite">25.000 g · 25 kg · 0,025 t</output></div>
+                    <h4>Carbono negro (BC)</h4>
+                    <p class="doc-formula">E<sub>BC</sub> = (FE<sub>BC</sub> / 100) × E<sub>PM2.5</sub></p>
+                    <p>Quando o fator de BC é dado como percentual de PM2.5, aplique-o à massa de material particulado fino. Exemplo fictício: 10% de 25.000 g corresponde a 2.500 g de BC.</p>
+                    <h4>Especiação química</h4>
+                    <p class="doc-formula">E<sub>s</sub> = E<sub>p</sub> × f<sub>p,s</sub></p>
+                    <p>A fração f distribui a emissão E do poluente p entre as espécies s. A metodologia preserva os poluentes sem especiação. A tabela original tem 45 entradas, podendo incluir contribuições para uma mesma espécie a partir de diferentes poluentes.</p>
+                    <ol class="doc-diagram"><li>PM2.5 · 16 entradas</li><li>SOx · 2 entradas</li><li>NOx · 2 entradas</li><li>NMVOC · 25 entradas</li></ol>
+                    <details><summary>Consultar exemplos de espécies</summary>
+                    <div class="doc-table" tabindex="0" role="region" aria-label="Tabela técnica"><table><thead><tr><th scope="col">Origem</th><th scope="col">Exemplos</th></tr></thead><tbody><tr><td>PM2.5</td><td>PAL, PCA, PCL, PFE, PK, PMOTHR, PSO4</td></tr><tr><td>SOx</td><td>SO2, PSO4</td></tr><tr><td>NOx</td><td>NO2, HONO</td></tr><tr><td>NMVOC</td><td>ACET, FORM, ISOP, TOL, BENZENE</td></tr></tbody></table></div></details>
+                </section>
+                <section id="doc-temporal" class="doc-topic" data-doc-panel aria-labelledby="doc-temporal-title">
+                    <h3 id="doc-temporal-title">Distribuição temporal</h3>
+                    <p>Na metodologia original, a massa de cada fonte e poluente recebe um peso semanal e um peso horário.</p>
+                    <p class="doc-formula">E<sub>i,p,d,h</sub> = E<sub>i,p</sub> × P<sub>d</sub> × P<sub>h</sub></p>
+                    <p class="doc-formula">P<sub>h</sub> = w<sub>h</sub> / Σ w<sub>h</sub></p>
+                    <p>P(d) é a fração do dia da semana e P(h) é a fração horária obtida do peso original w(h). A combinação dos sete dias com 24 horas produz 168 posições de um perfil semanal.</p>
+                    <p>Na referência original, o peso é 0,1428 de domingo a sexta por dia e 0,1432 no sábado. Os 24 pesos horários são normalizados pela soma.</p>
+                    <div data-doc-profile>
+                    <figure class="doc-result" data-doc-image="imgs/documentacao.pega/perfil-semanal.png" data-doc-image-kind="individual">
+                        <h5>Perfil semanal de emissões</h5>
+                        <p>O perfil distribui o peso entre os sete dias da semana.</p>
+                        <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                        <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfil semanal de emissões">
+                            <img alt="Perfil semanal de emissões" decoding="async">
+                            <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                        </button>
+                        <figcaption>Use os rótulos do gráfico para comparar a contribuição de cada dia.</figcaption>
+                    </figure>
+                    <figure class="doc-result" data-doc-image="imgs/documentacao.pega/mapa-emissoes-brasil.png" data-doc-image-kind="individual">
+                        <h5>Perfil horário de emissões</h5>
+                        <p>O perfil distribui o peso entre as 24 horas do dia.</p>
+                        <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                        <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfil horário de emissões">
+                            <img alt="Perfil horário de emissões" decoding="async">
+                            <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                        </button>
+                        <figcaption>Leia os valores e a unidade no eixo vertical do gráfico.</figcaption>
+                    </figure>
+                    <figure class="doc-result" data-doc-image="imagens/documentacao-pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
+                        <h5>Perfis semanal e horário de emissões</h5>
+                        <p>O resultado reúne as duas escalas temporais do inventário.</p>
+                        <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfis semanal e horário de emissões">
+                            <img alt="Perfis semanal e horário de emissões" decoding="async">
+                            <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                        </button>
+                        <figcaption>Use os eixos e as legendas para distinguir o dia da semana da hora do dia.</figcaption>
+                    </figure>
+                    </div>
+                    <details><summary>Consultar os 24 pesos antes da normalização</summary>
+                    <p>0,030 · 0,030 · 0,031 · 0,033 · 0,037 · 0,045 · 0,050 · 0,050 · 0,050 · 0,051 · 0,051 · 0,048 · 0,045 · 0,040 · 0,041 · 0,041 · 0,041 · 0,048 · 0,050 · 0,048 · 0,043 · 0,036 · 0,031 · 0,030</p></details>
+                    <p class="doc-note">Os perfis acima reproduzem os pesos fornecidos para a metodologia original.</p>
+                </section>
+                <section id="doc-espacial" class="doc-topic" data-doc-panel aria-labelledby="doc-espacial-title">
+                    <h3 id="doc-espacial-title">Distribuição espacial</h3>
+                    <p>A metodologia aloca as fontes às células do domínio WRF. O transporte e a dispersão correspondem a etapas de simulação atmosférica.</p>
+                    <ol><li>Ler a grade do domínio WRF e identificar suas células.</li><li>Converter as coordenadas em geometrias e compatibilizar os sistemas de referência espacial.</li><li>Intersectar fontes e células e identificar as fontes pertencentes ao domínio.</li><li>Agrupar por célula, poluente, dia e hora, converter as unidades e preparar as matrizes.</li></ol>
+                    <p class="doc-formula">E<sub>c,p,d,h</sub> = Σ E<sub>i,p,d,h</sub></p>
+                    <p>A soma considera as fontes i associadas à célula c. Fontes fora do domínio ficam fora das células internas.</p>
+                    <h4>Conversão de unidades</h4>
+                    <p class="doc-formula">Particulado · F = (E × 10<sup>6</sup>) / (A × 3600)</p>
+                    <p>E em gramas no intervalo de uma hora e A em m². 10⁶ converte gramas em microgramas e 3600 converte uma hora em segundos. Resultado em µg/m²/s.</p>
+                    <p class="doc-formula">Gases · F = E / (M × A)</p>
+                    <p>E em gramas no intervalo de uma hora, M em g/mol e A em km². Resultado em mol/km²/h. A grade original de referência era de 3 km × 3 km, ou 9 km² (9.000.000 m²) por célula.</p>
+                    <figure class="doc-result" data-doc-image="imgs/documentacao.pega/mapa-emissoes-brasil.png">
+                        <h5>Localização geográfica das emissões</h5>
+                        <p>Visualização da distribuição das emissões e do domínio de processamento em relação ao território brasileiro.</p>
+                        <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                        <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Localização geográfica das emissões">
+                            <img alt="Localização geográfica das emissões" decoding="async">
+                            <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                        </button>
+                        <figcaption>Use o contorno nacional para localizar o domínio e a legenda para interpretar as emissões.</figcaption>
+                    </figure>
+                </section>
+                <section id="doc-visualizacoes" class="doc-topic" data-doc-panel aria-labelledby="doc-visualizacoes-title">
+                    <h3 id="doc-visualizacoes-title">Visualizações científicas</h3>
+                    <div class="doc-tabs" data-doc-tabs>
+                        <nav aria-label="Tipos de visualização"><a href="#doc-vis-barras">Emissões por poluente</a><a href="#doc-vis-perfis">Perfis temporais</a><a href="#doc-vis-espacial">Distribuição espacial</a><a href="#doc-vis-mapa">Mapas interativos</a></nav>
+                        <section id="doc-vis-barras" data-doc-panel>
+                            <h4>Emissões por poluente</h4>
+                            <figure class="doc-result" data-doc-image="imgs/documentacao.pega/emissoes-por-poluente.png">
+                                <h5>Emissões por poluente</h5>
+                                <p>Resumo das emissões agrupadas por poluente ou espécie.</p>
+                                <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Emissões por poluente">
+                                    <img alt="Emissões por poluente" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Confira a unidade, o tipo de escala e se os valores podem ser comparados entre si.</figcaption>
+                            </figure>
+                        </section>
+                        <section id="doc-vis-perfis" data-doc-panel>
+                            <h4>Perfis temporais</h4>
+                            <div data-doc-profile>
+                            <figure class="doc-result" data-doc-image="imgs/documentacao.pega/perfil-semanal.png" data-doc-image-kind="individual">
+                                <h5>Perfil semanal de emissões</h5>
+                                <p>O perfil distribui o peso entre os sete dias da semana.</p>
+                                <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfil semanal de emissões">
+                                    <img alt="Perfil semanal de emissões" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Use os rótulos do gráfico para comparar a contribuição de cada dia.</figcaption>
+                            </figure>
+                            <figure class="doc-result" data-doc-image="imgs/documentacao.pega/perfil-horario.png" data-doc-image-kind="individual">
+                                <h5>Perfil horário de emissões</h5>
+                                <p>O perfil distribui o peso entre as 24 horas do dia.</p>
+                                <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfil horário de emissões">
+                                    <img alt="Perfil horário de emissões" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Leia os valores e a unidade no eixo vertical do gráfico.</figcaption>
+                            </figure>
+                            <figure class="doc-result" data-doc-image="imagens/documentacao-pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
+                                <h5>Perfis semanal e horário de emissões</h5>
+                                <p>O resultado reúne as duas escalas temporais do inventário.</p>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfis semanal e horário de emissões">
+                                    <img alt="Perfis semanal e horário de emissões" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Use os eixos e as legendas para distinguir o dia da semana da hora do dia.</figcaption>
+                            </figure>
+                            </div>
+                        </section>
+                        <section id="doc-vis-espacial" data-doc-panel>
+                            <h4>Distribuição espacial</h4>
+                            <figure class="doc-result" data-doc-image="imgs/documentacao.pega/mapa-emissoes-brasil.png">
+                                <h5>Localização geográfica das emissões</h5>
+                                <p>Visualização da distribuição das emissões e do domínio de processamento em relação ao território brasileiro.</p>
+                                <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Localização geográfica das emissões">
+                                    <img alt="Localização geográfica das emissões" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Use o contorno nacional para localizar o domínio e a legenda para interpretar as emissões.</figcaption>
+                            </figure>
+                        </section>
+                        <section id="doc-vis-mapa" data-doc-panel>
+                            <h4>Mapas interativos</h4>
+                            <figure class="doc-result" data-doc-image="imgs/documentacao.pega/mapa-interativo.PNG">
+                                <h5>Mapa interativo de emissões</h5>
+                                <p>Imagem exportada da visualização geográfica do PEGA.</p>
+                                <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
+                                <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Mapa interativo de emissões">
+                                    <img alt="Mapa interativo de emissões" decoding="async">
+                                    <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                                </button>
+                                <figcaption>Consulte a legenda para identificar a variável, a unidade e a escala de cores.</figcaption>
+                            </figure>
+                            <a class="doc-button" href="#sobre">Ver o mapa demonstrativo</a>
+                        </section>
+                    </div>
+                    <h4>Geração das imagens</h4>
+                    <p>O fluxo agrupa os resultados, seleciona poluentes, aplica unidades, escalas e paletas, associa valores a geometrias e renderiza imagens com legendas. O roteiro original descreve exportação PNG a 300 e 600 DPI.</p>
+                </section>
+                <section id="doc-exportacoes" class="doc-topic" data-doc-panel aria-labelledby="doc-exportacoes-title">
+                    <h3 id="doc-exportacoes-title">Relatórios e exportações</h3>
+                    <p>As saídas abaixo são referências da metodologia original. </p>
+                    <ul class="doc-file-list"><li><i class="fa-solid fa-file-csv" aria-hidden="true"></i> <strong>CSV</strong> Planilhas e diagnósticos</li><li><i class="fa-solid fa-file-image" aria-hidden="true"></i> <strong>PNG</strong> Gráficos e mapas</li><li><i class="fa-solid fa-file-code" aria-hidden="true"></i> <strong>NetCDF</strong> Matrizes de emissões</li><li><i class="fa-solid fa-file-lines" aria-hidden="true"></i> <strong>Logs</strong> Etapas e diagnósticos</li></ul>
+                    <details><summary>Quatro relatórios de referência</summary>
+                    <ol><li>Emissões totais agrupadas por poluente ou espécie química.</li><li>Emissões por fonte, coordenadas e poluente.</li><li>Emissões por célula WRF, com identificador, linha, coluna, centroide, poluente, médias horárias original e convertida, além da unidade.</li><li>Fracionamento por poluente ou espécie, com massa molar quando aplicável, emissão bruta total, média convertida, máximo convertido e unidade.</li></ol></details>
+                    <details class="doc-report-results" hidden>
+                        <summary>Ver exemplos de relatórios exportados</summary>
+                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-emissoes-poluente.png" data-doc-image-kind="optional" hidden>
+                            <h5>Relatório de emissões por poluente</h5>
+                            <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de emissões por poluente">
+                                <img alt="Relatório de emissões por poluente" decoding="async">
+                                <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                            </button>
+                            <figcaption>Confira o agrupamento e a unidade de massa no relatório.</figcaption>
+                        </figure>
+                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-emissoes-usina.png" data-doc-image-kind="optional" hidden>
+                            <h5>Relatório de emissões por usina</h5>
+                            <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de emissões por usina">
+                                <img alt="Relatório de emissões por usina" decoding="async">
+                                <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                            </button>
+                            <figcaption>Consulte os registros por fonte e poluente.</figcaption>
+                        </figure>
+                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-grade-wrf.png" data-doc-image-kind="optional" hidden>
+                            <h5>Relatório da grade WRF</h5>
+                            <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório da grade WRF">
+                                <img alt="Relatório da grade WRF" decoding="async">
+                                <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                            </button>
+                            <figcaption>Use a linha e a coluna para localizar as células e confira a unidade das médias.</figcaption>
+                        </figure>
+                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-fracionamento.png" data-doc-image-kind="optional" hidden>
+                            <h5>Relatório de fracionamento</h5>
+                            <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de fracionamento">
+                                <img alt="Relatório de fracionamento" decoding="async">
+                                <span aria-hidden="true"><i class="fa-solid fa-expand"></i> Ampliar imagem</span>
+                            </button>
+                            <figcaption>Consulte os campos de massa molar, emissão e unidade quando disponíveis.</figcaption>
+                        </figure>
+                    </details>
+                    <h4>Dimensões e variáveis NetCDF</h4>
+                    <ol class="doc-diagram"><li>Tempo</li><li>Horizontal X</li><li>Horizontal Y</li><li>Nível vertical</li><li>Variáveis de emissão</li></ol>
+                    <p>Exemplos de nomes são <code>E_SO2</code>, <code>E_NO2</code> e <code>E_HONO</code>. O roteiro original gera <code>wrfchemi</code> a partir de <code>wrfinput_d01</code>. A compatibilidade depende do domínio e do mecanismo químico do WRF-Chem.</p>
+                    <h4>Logs e diagnósticos</h4>
+                    <p>Os registros permitem acompanhar etapas, identificar erros e documentar configurações.</p>
+                </section>
+                <section id="doc-arquitetura" class="doc-topic" data-doc-panel aria-labelledby="doc-arquitetura-title">
+                    <h3 id="doc-arquitetura-title">Arquitetura do software</h3>
+                    <p>Arquitetura de referência descrita pelo projeto.</p>
+                    <ol class="doc-diagram"><li>Usuário</li><li>Navegador web</li></ol>
+                    <div class="doc-boundary"><strong><i class="fa-brands fa-docker" aria-hidden="true"></i> Ambiente Docker</strong>
+                    <ol class="doc-diagram doc-connected doc-architecture-flow">
+                        <li><span class="doc-platform-marks" aria-hidden="true"><i class="fa-brands fa-html5" aria-hidden="true"></i><i class="fa-brands fa-css3-alt" aria-hidden="true"></i><i class="fa-brands fa-js" aria-hidden="true"></i></span>Frontend<br><small>HTML · CSS · JavaScript</small></li>
+                        <li><span class="doc-platform-marks" aria-hidden="true"><span class="doc-brand doc-brand-fastapi" aria-hidden="true"></span><span class="doc-brand doc-brand-uvicorn" aria-hidden="true"></span></span>API REST<br><small>FastAPI · Uvicorn</small></li>
+                        <li><span class="doc-platform-marks" aria-hidden="true"><span class="doc-brand doc-brand-python" aria-hidden="true"></span></span>Backend Python<br><small>Motor científico</small></li>
+                    </ol>
+                    <p>Importação e validação → cálculo → especiação → distribuição temporal e espacial → geração de resultados.</p></div>
+                    <ol class="doc-diagram"><li>CSV</li><li>Gráficos</li><li>Mapas</li><li>NetCDF</li></ol>
+                    <dl><dt>Frontend</dt><dd>Recebe arquivos e configurações e apresenta resultados.</dd><dt>API</dt><dd>Recebe solicitações, aciona o backend e retorna respostas.</dd><dt>Backend e dados de referência</dt><dd>Validam, calculam e exportam usando fatores, perfis e referências químicas e geográficas.</dd><dt>Docker</dt><dd>Padroniza a execução e as dependências.</dd></dl>
+                    <details><summary>Estrutura de diretórios informada no projeto</summary><pre class="doc-tree"><code>PEGA/
+├── backend/              # API e motor científico
+├── frontend/             # Interface
+├── data/                 # Referências
+├── docs/                 # Documentação
+├── exemplos/             # Exemplos
+├── tests/                # Testes
+├── Dockerfile            # Construção da imagem
+├── requirements.txt      # Dependências de execução
+└── requirements-dev.txt  # Dependências de desenvolvimento</code></pre>
+                    <p class="doc-note">Árvore de referência do briefing.</p></details>
+                </section>
+                <section id="doc-hospedagem" class="doc-topic" data-doc-panel aria-labelledby="doc-hospedagem-title">
+                    <h3 id="doc-hospedagem-title">Hospedagem e publicação</h3>
+                    <h4>Da pesquisa científica à aplicação web</h4>
+                    <p>O PEGA é disponibilizado na web por meio de uma infraestrutura integrada de desenvolvimento, controle de versão e hospedagem. O código-fonte é mantido em um repositório GitHub, conectado à Railway, responsável pela construção e execução da aplicação.</p>
+                    <ol class="doc-diagram doc-connected doc-publishing">
+                        <li>
+                            <span class="doc-publishing-mark" aria-hidden="true"><i class="fa-solid fa-laptop-code"></i></span>
+                            <strong>Desenvolvimento local</strong>
+                            <p>Desenvolvimento, manutenção e atualização do software.</p>
+                        </li>
+                        <li>
+                            <span class="doc-publishing-mark" aria-hidden="true"><i class="fa-brands fa-git-alt"></i> <i class="fa-brands fa-github"></i></span>
+                            <strong>Git e GitHub</strong>
+                            <p>Controle de versão e armazenamento do código-fonte.</p>
+                        </li>
+                        <li>
+                            <span class="doc-publishing-mark"><span class="doc-brand doc-brand-railway" aria-hidden="true"></span></span>
+                            <strong>Railway</strong>
+                            <p>Construção da imagem Docker, hospedagem e execução da aplicação.</p>
+                        </li>
+                        <li>
+                            <span class="doc-publishing-mark" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+                            <strong>PEGA na web</strong>
+                            <p>Aplicação científica disponível gratuitamente pela internet.</p>
+                        </li>
+                    </ol>
+                    <h4>Atualizações automáticas</h4>
+                    <p>Com a integração entre GitHub e Railway, as alterações enviadas à branch configurada para publicação podem iniciar automaticamente um novo processo de deploy, disponibilizando as atualizações após a conclusão bem-sucedida da construção e execução da aplicação.</p>
+                    <p class="doc-note">O PEGA está disponível gratuitamente pela internet, permitindo que pesquisadores, estudantes e instituições utilizem suas funcionalidades diretamente pelo navegador, sem necessidade de instalação local.</p>
+                    <a class="doc-button doc-primary" href="https://pega.projetoozoniomover.org/" target="_blank" rel="noopener noreferrer">Acessar o PEGA<span aria-hidden="true">↗</span></a>
+                </section>
+                <section id="doc-limites" class="doc-topic" data-doc-panel aria-labelledby="doc-limites-title">
+                    <h3 id="doc-limites-title">Recomendações</h3>
+                    <h4>Referências científicas e técnicas</h4>
+                    <details><summary>Fontes metodológicas</summary>
+                    <p>Inventários, fatores de emissão, especiação, perfis temporais e geoprocessamento seguem a descrição original em R fornecida no briefing. As referências bibliográficas, as fontes das tabelas e a correspondência com a versão Python aguardam confirmação.</p></details>
+                    <details><summary>Documentação técnica</summary>
+                    <p>Consulte <a href="https://leafletjs.com/reference.html">Leaflet</a> para a biblioteca do mapa, <a href="https://docs.docker.com/">Docker</a>, <a href="https://docs.python.org/3/">Python</a> e <a href="https://git-scm.com/doc">Git</a> para as tecnologias do projeto, e os manuais de <a href="https://www2.mmm.ucar.edu/wrf/users/">WRF</a> e <a href="https://docs.unidata.ucar.edu/netcdf-c/current/">NetCDF</a> para formatos e integração.</p></details>
+                </section>
+            </div>
         </div>
-
-        <!-- GRID -->
-        <div class="doc-grid">
-
-            <!-- CARD 1 -->
-            <div class="doc-card">
-                <h3>⚙️ Instalação</h3>
-                <p>
-                    Instale o R e o RStudio, configure os pacotes necessários
-                    como dplyr, ggplot2 e tidyr, e carregue o projeto no ambiente.
-                </p>
+        <dialog class="doc-image-dialog" aria-labelledby="doc-image-dialog-title">
+            <div class="doc-image-dialog-content">
+                <header>
+                    <h3 id="doc-image-dialog-title"></h3>
+                    <form method="dialog"><button type="submit" class="doc-button" autofocus>Fechar</button></form>
+                </header>
+                <img alt="" decoding="async">
             </div>
-
-            <!-- CARD 2 -->
-            <div class="doc-card">
-                <h3>▶️ Execução</h3>
-                <p>
-                    Execute os scripts principais no RStudio para importar dados,
-                    processar informações e gerar análises automáticas.
-                </p>
-            </div>
-
-            <!-- CARD 3 -->
-            <div class="doc-card">
-                <h3>🧩 Estrutura</h3>
-                <p>
-                    O sistema é dividido em entrada de dados, processamento,
-                    motor científico e saída de resultados.
-                </p>
-            </div>
-
-            <!-- CARD 4 -->
-            <div class="doc-card">
-                <h3>🧪 Observações</h3>
-                <p>
-                    Recomendado para uso acadêmico com grande volume de dados
-                    e máquinas com maior capacidade de processamento.
-                </p>
-            </div>
-
-        </div>
-
+        </dialog>
     </div>
-
 </section>
 <section id="equipe" class="equipe">
     <div class="equipe-particulas"></div>
@@ -274,7 +694,7 @@ Motor Computacional<body>
             </span>
 
             <h2>
-                Desenvolvedores, Pesquisadores e Responsáveis pelo PEGA
+                Desenvolvedores do software PEGA
             </h2>
 
             <p>
@@ -290,20 +710,20 @@ Motor Computacional<body>
             <!-- MEMBRO 1 -->
             <div class="membro-card">
 
-                <img src="imgs/Pessoal/perfil-Sergio.jfif" alt="Membro da equipe">
+                <div class="membro-foto">
+                    <img src="imgs/Equipe-Pega/Jpmagri.jpeg" alt="Membro da equipe">
+                    <span class="membro-bolsa">IC</span>
+                </div>
 
-                <h3>Sergio Ibarra Espinosa</h3>
-
-                <span class="cargo">Desenvolvedor</span>
+                <h3>João Pedro Magri</h3>
+                <span class="membro-funcao">Desenvolvedor de Software</span>
 
                 <p>
-                    Responsável pelo desenvolvimento do sistema, análise de dados
-                    atmosféricos e implementação dos modelos em R.
+                    Responsável pela supervisão científica do projeto e validação
+                    dos métodos estatísticos aplicados.
                 </p>
 
-                <!-- CONTATOS -->
                 <div class="contatos">
-
                     <a href="#"><img src="imgs/logo-insta.png" alt="Instagram"></a>
                     <a href="#"><img src="imgs/logo-lattes.png" alt="Lattes"></a>
                     <a href="#"><img src="imgs/email-logo-removebg-preview.png" alt="Email"></a>
@@ -315,11 +735,13 @@ Motor Computacional<body>
             <!-- MEMBRO 2 -->
             <div class="membro-card">
 
-                <img src="imgs/Pessoal/perfil-Iara.jfif" alt="Membro da equipe">
+                <div class="membro-foto">
+                    <img src="imgs/Equipe-Pega/iaradasilva.webp" alt="Membro da equipe">
+                    <span class="membro-bolsa">PBD1</span>
+                </div>
 
                 <h3>Iara da Silva</h3>
-
-                <span class="cargo">Pós-Doc</span>
+                <span class="membro-funcao">Analista Científica</span>
 
                 <p>
                     Atua na análise científica dos dados ambientais e validação
@@ -338,18 +760,22 @@ Motor Computacional<body>
             <!-- MEMBRO 3 -->
             <div class="membro-card">
 
-                <img src="imgs/Pessoal/perfil-JP.jfif" alt="Membro da equipe">
+                <div class="membro-foto">
+                    <img src="imgs/Equipe-Pega/perfil-Sergio.jpg" alt="Membro da equipe">
+                    <span class="membro-bolsa">BPD2</span>
+                </div>
 
-                <h3>João Pedro Magri</h3>
-
-                <span class="cargo">Iniciação Ciêntifica (IC)</span>
+                <h3>Sergio Ibarra Espinosa</h3>
+                <span class="membro-funcao">Pesquisador Científico</span>
 
                 <p>
-                    Responsável pela supervisão científica do projeto e validação
-                    dos métodos estatísticos aplicados.
+                    Responsável pelo desenvolvimento do sistema, análise de dados
+                    atmosféricos e implementação dos modelos em R.
                 </p>
 
+                <!-- CONTATOS -->
                 <div class="contatos">
+
                     <a href="#"><img src="imgs/logo-insta.png" alt="Instagram"></a>
                     <a href="#"><img src="imgs/logo-lattes.png" alt="Lattes"></a>
                     <a href="#"><img src="imgs/email-logo-removebg-preview.png" alt="Email"></a>
@@ -363,83 +789,47 @@ Motor Computacional<body>
     </div>
 
 </section>
-<section id="futuras-implementacoes" class="futuras">
-    <div class="futuras-particulas"></div>
+<section id="futuras-implementacoes" class="futuras" aria-labelledby="pega-roadmap-title">
     <div class="container">
+        <header class="futuras-header">
+            <span class="tag-futuras">Futuras Implementações</span>
+            <h2 id="pega-roadmap-title">O Futuro do PEGA</h2>
+            <p>Expansão internacional, integração de dados e colaboração científica para transformar o PEGA em uma plataforma global de inventários de emissões atmosféricas.</p>
+        </header>
 
-        <!-- HEADER -->
-        <div class="futuras-header">
-
-            <span class="tag-futuras">
-                Futuras Implementações
-            </span>
-
-            <h2>
-                Melhorias e Expansão do PEGA
-            </h2>
-
-            <p>
-                Planejamento de novas funcionalidades e evolução do sistema para ampliar
-                sua capacidade científica e computacional.
-            </p>
-
-        </div>
-
-        <!-- GRID -->
-        <div class="futuras-grid">
-
-            <div class="futura-card">
-                <h3>🤖 Inteligência Artificial</h3>
-                <p>
-                    Implementação de modelos de IA para previsão de padrões atmosféricos
-                    e detecção automática de anomalias ambientais.
-                </p>
-            </div>
-
-            <div class="futura-card">
-                <h3>🌐 Dados em Tempo Real</h3>
-                <p>
-                    Integração com sensores e APIs ambientais para análise contínua
-                    de dados atmosféricos em tempo real.
-                </p>
-            </div>
-
-            <div class="futura-card">
-                <h3>📊 Dashboard Interativo</h3>
-                <p>
-                    Criação de painéis dinâmicos para visualização científica
-                    com gráficos interativos e mapas ambientais.
-                </p>
-            </div>
-
-            <div class="futura-card">
-                <h3>☁️ Cloud Computing</h3>
-                <p>
-                    Migração do processamento para ambientes em nuvem,
-                    permitindo maior escalabilidade e desempenho.
-                </p>
-            </div>
-
-            <div class="futura-card">
-                <h3>📡 Integração Global</h3>
-                <p>
-                    Conexão com bases de dados internacionais para ampliar
-                    a análise atmosférica global.
-                </p>
-            </div>
-
-            <div class="futura-card">
-                <h3>🔬 Modelos Avançados</h3>
-                <p>
-                    Desenvolvimento de novos modelos matemáticos para simulação
-                    mais precisa da atmosfera.
-                </p>
-            </div>
-
-        </div>
-
+        <ol class="pega-roadmap" role="list">
+            <li class="pega-roadmap-step">
+                <span class="pega-roadmap-number" aria-hidden="true">01</span>
+                <div class="pega-roadmap-content">
+                    <span class="pega-roadmap-icon" aria-hidden="true"><i class="fa-solid fa-globe"></i></span>
+                    <div>
+                        <h3>Expansão internacional</h3>
+                        <p>Ampliar a cobertura geográfica do PEGA, permitindo a elaboração e a análise de inventários de emissões atmosféricas para diferentes países e regiões do mundo.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="pega-roadmap-step">
+                <span class="pega-roadmap-number" aria-hidden="true">02</span>
+                <div class="pega-roadmap-content">
+                    <span class="pega-roadmap-icon" aria-hidden="true"><i class="fa-solid fa-database"></i></span>
+                    <div>
+                        <h3>Banco de dados integrado</h3>
+                        <p>Disponibilizar bases de dados de atividade, fatores de emissão e referências científicas diretamente na plataforma, facilitando o acesso às informações necessárias para a elaboração de inventários de emissões.</p>
+                    </div>
+                </div>
+            </li>
+            <li class="pega-roadmap-step">
+                <span class="pega-roadmap-number" aria-hidden="true">03</span>
+                <div class="pega-roadmap-content">
+                    <span class="pega-roadmap-icon" aria-hidden="true"><i class="fa-solid fa-people-group"></i></span>
+                    <div>
+                        <h3>Colaboração científica</h3>
+                        <p>Criar um ambiente colaborativo no qual pesquisadores e instituições possam compartilhar conjuntos de dados autorizados, promovendo o intercâmbio de informações, a acessibilidade aos dados e o desenvolvimento de pesquisas científicas.</p>
+                    </div>
+                </div>
+            </li>
+        </ol>
     </div>
-
 </section>
 
 <section id="contato" class="contato">
@@ -449,11 +839,11 @@ Motor Computacional<body>
         <div class="contato-header">
 
             <span class="tag-contato">
-                Contato & Repositório
+                Repositório
             </span>
 
             <h2>
-                Entre em Contato com a Equipe
+                Veja o nosso repositório
             </h2>
 
             <p>
@@ -477,7 +867,7 @@ Motor Computacional<body>
                     documentação e atualizações do projeto.
                 </p>
 
-                <a href="#" target="_blank" class="btn-contato">
+                <a href="https://github.com/Eae-Lapar/Software-PEGA" target="_blank" class="btn-contato">
                     Acessar Repositório
                 </a>
 
@@ -489,6 +879,7 @@ Motor Computacional<body>
     </div>
 
 </section>
+
 <!-- ==========================
    FOOTER
 ========================== -->
@@ -500,7 +891,11 @@ Motor Computacional<body>
         <div class="footer-col">
 
             <div class="footer-logo">
-                <img src="gifs/pega-acenandofeliz.gif" alt="Logo PEGA">
+                <video autoplay loop muted playsinline
+                    aria-label="Mascote PEGA">
+                    <source src="gifs/Pega-bravo.mp4" type="video/mp4">
+                </video>
+
                 <span>PEGA</span>
             </div>
 
@@ -545,7 +940,7 @@ Motor Computacional<body>
 
             <div class="footer-social">
 
-                <a href="#">
+                <a href="https://github.com/Eae-Lapar/Software-PEGA">
                     <img src="imgs/github-logo.png" alt="GitHub">
                 </a>
 
@@ -562,86 +957,14 @@ Motor Computacional<body>
         <p class="footer-copy">
         © 2026 Projeto Ozônio |
         Site desenvolvido por
-        <span class="nome-dev">João Pedro Magri</span>
+        <span class="nome-dev">João Pedro Magri</span> e <span class="nome-dev">Matheus Ferreira</span>
         </p>
 
     </div>
 
 </footer>
-<script>
-const tooltip = document.getElementById("codeTooltip");
-
-document.addEventListener("DOMContentLoaded", () => {
-
-document.querySelectorAll(".code-card .kw, .code-card .fn").forEach(el => {
-
-el.addEventListener("mousemove", (e) => {
-tooltip.style.display = "block";
-tooltip.style.left = (e.clientX + 15) + "px";
-tooltip.style.top = (e.clientY + 15) + "px";
-tooltip.innerText = el.dataset.info;
-});
-
-el.addEventListener("mouseleave", () => {
-tooltip.style.display = "none";
-});
-
-});
-
-});
-/* ================= CARROSSEL 3D ================= */
-
-const cards = document.querySelectorAll(".galeria-card");
-const prevBtn = document.querySelector(".prev");
-const nextBtn = document.querySelector(".next");
-
-let current = 0;
-
-/* POSIÇÕES */
-
-function updateCarousel(){
-
-  cards.forEach(card => {
-    card.classList.remove("active", "left", "right");
-  });
-
-  const prev =
-    (current - 1 + cards.length) % cards.length;
-
-  const next =
-    (current + 1) % cards.length;
-
-  cards[current].classList.add("active");
-  cards[prev].classList.add("left");
-  cards[next].classList.add("right");
-
-}
-
-/* BOTÃO DIREITA */
-
-nextBtn.addEventListener("click", () => {
-
-  current =
-    (current + 1) % cards.length;
-
-  updateCarousel();
-
-});
-
-/* BOTÃO ESQUERDA */
-
-prevBtn.addEventListener("click", () => {
-
-  current =
-    (current - 1 + cards.length) % cards.length;
-
-  updateCarousel();
-
-});
-
-/* INICIAR */
-
-updateCarousel();
-</script>
+<script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
+<script src="pega.js" defer></script>
 </body>
 </html>
