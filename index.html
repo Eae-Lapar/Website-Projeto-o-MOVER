@@ -1,4 +1,5 @@
-
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +28,7 @@
         type="image/x-icon">
 
   <link rel="stylesheet" href="style.css?v=20261103-5">
-  <link rel="stylesheet" href="PROJETO.css?v=20261103-45">
+  <link rel="stylesheet" href="PROJETO.css?v=20261127-3">
 
   <!-- Fontes existentes -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
@@ -35,6 +36,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
         rel="stylesheet">
+  <link rel="stylesheet" href="language.css">
 </head>
 
 
@@ -79,6 +81,12 @@
     <!-- BOTÃO DE SOFTWARES -->
 
 <div class="top-actions">
+
+        <div class="language-switcher" role="group" aria-label="Idioma da página">
+            <button type="button" lang="pt-BR" aria-label="Português" aria-pressed="true">PT</button>
+            <span class="language-divider" aria-hidden="true">|</span>
+            <button type="button" lang="en" aria-label="English" aria-pressed="false">EN</button>
+        </div>
 
         <div class="dropdown" id="dropdown-softwares">
 
@@ -144,7 +152,7 @@
 
       <div class="hero-stat">
         <h3>7</h3>
-        <p>Instituições <br>de Pesquisa</p>
+        <p><span data-en="Research">Instituições</span> <br>de Pesquisa</p>
       </div>
 
       <div class="hero-stat">
@@ -3075,6 +3083,8 @@ simulações a serem realizadas.
 
 </footer>
 
+<script src="i18n-index.js"></script>
+<script src="language.js"></script>
 <script>
 
 /* === O₃ MOVER — JAVASCRIPT PRINCIPAL === */
@@ -3154,6 +3164,8 @@ function pesquisarNoticias() {
   }
 
 }
+
+siteLanguage.onChange(pesquisarNoticias);
 
 /* ================ BOTÃO PESQUISAR ================ */
 
@@ -3301,6 +3313,8 @@ if (equipe) {
 
     `;
 
+    siteLanguage.register(topo);
+
     /* === ÁREA DE ROLAGEM === */
 
     const scroll =
@@ -3371,6 +3385,7 @@ if (equipe) {
 
         identificacao.textContent =
           instituicao;
+        siteLanguage.register(identificacao);
 
 
         info.insertBefore(
@@ -3401,6 +3416,8 @@ if (equipe) {
     painel.appendChild(
       scroll
     );
+
+    siteLanguage.register(semResultado);
 
     /* === INSERIR PAINEL DEPOIS DO TÍTULO === */
 
@@ -3504,6 +3521,9 @@ if (equipe) {
         contador.textContent =
           encontrados;
 
+        contador.nextElementSibling.textContent =
+          siteLanguage.translate(encontrados === 1 ? "integrante" : "integrantes");
+
       }
 
 
@@ -3516,7 +3536,9 @@ if (equipe) {
 
     }
 
-    /* === BOTÃO PESQUISAR === */
+      siteLanguage.onChange(pesquisarEquipe);
+
+      /* === BOTÃO PESQUISAR === */
 
     if (botao) {
 
@@ -3612,6 +3634,7 @@ let fraseIndex = 0;
 let letraIndex = 0;
 
 let apagando = false;
+let typingTimer;
 
 // Mantém a última letra e o cursor juntos, inclusive nas quebras de linha.
 function atualizarDigitacao(texto) {
@@ -3643,7 +3666,7 @@ function digitar() {
 
 
   const fraseAtual =
-    frases[fraseIndex];
+    siteLanguage.translate(frases[fraseIndex]);
 
 
   if (!apagando) {
@@ -3661,7 +3684,7 @@ function digitar() {
 
       apagando = true;
 
-      setTimeout(
+      typingTimer = setTimeout(
         digitar,
         2000
       );
@@ -3691,13 +3714,20 @@ function digitar() {
   }
 
 
-  setTimeout(
+  typingTimer = setTimeout(
     digitar,
     apagando ? 40 : 70
   );
 
 }
 
+
+siteLanguage.onChange(() => {
+  clearTimeout(typingTimer);
+  letraIndex = 0;
+  apagando = false;
+  digitar();
+});
 
 digitar();
 

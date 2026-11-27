@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous">
-  <link rel="stylesheet" href="PEGA.css">
-  <title>Pega | Webpage</title>
+  <link rel="stylesheet" href="PEGA.css?v=20261127-10">
+  <title>PEGA | Plataforma de Estudos e Gestão Atmosférica</title>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+  <link rel="stylesheet" href="vendor/highlight-11.9.0/styles/atom-one-dark.min.css">
+    <script src="vendor/highlight-11.9.0/highlight.min.js"></script>
+    <script>window.hljs?.highlightAll();</script>
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome-6.7.2/css/all.min.css">
     <link rel="shortcut icon" href="imgs/logo-img.png" type="image/x-icon">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="language.css">
 </head>
 <body>
 <!-- NAVBAR -->
@@ -33,6 +33,12 @@
         <li><a href="#equipe">Equipe</a></li>
     </ul>
 
+    <div class="language-switcher" role="group" aria-label="Idioma da página">
+        <button type="button" lang="pt-BR" aria-label="Português" aria-pressed="true">PT</button>
+        <span class="language-divider" aria-hidden="true">|</span>
+        <button type="button" lang="en" aria-label="English" aria-pressed="false">EN</button>
+    </div>
+
 </nav>
 
 <!-- HERO -->
@@ -41,10 +47,6 @@
     <div class="hero-content">
 
         <h1>PEGA</h1>
-<br>
-        <span class="badge">
-            (Poluição, Emissão e Gases na Atmosfera)
-        </span>
         <h2>
             Plataforma de Estudos e Gestão Atmosférica
         </h2>
@@ -125,7 +127,7 @@
 
         <div class="sobre-visual">
 
-            <article class="pega-demo-map" aria-labelledby="pega-demo-map-title" data-demo-src="data/tpp_biomassa_2017_demo.txt">
+            <article class="pega-demo-map" aria-labelledby="pega-demo-map-title">
                 <header class="pega-demo-map-header">
                     <h3 id="pega-demo-map-title">Distribuição espacial de emissões</h3>
                     <p>Carbono Negro (BC) · Biomassa</p>
@@ -430,7 +432,7 @@
                         </button>
                         <figcaption>Use os rótulos do gráfico para comparar a contribuição de cada dia.</figcaption>
                     </figure>
-                    <figure class="doc-result" data-doc-image="imgs/documentacao.pega/mapa-emissoes-brasil.png" data-doc-image-kind="individual">
+                    <figure class="doc-result" data-doc-image="imgs/documentacao.pega/perfil-horario.png" data-doc-image-kind="individual">
                         <h5>Perfil horário de emissões</h5>
                         <p>O perfil distribui o peso entre as 24 horas do dia.</p>
                         <div class="doc-result-placeholder">Exemplo de resultado científico do PEGA.</div>
@@ -440,7 +442,7 @@
                         </button>
                         <figcaption>Leia os valores e a unidade no eixo vertical do gráfico.</figcaption>
                     </figure>
-                    <figure class="doc-result" data-doc-image="imagens/documentacao-pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
+                    <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
                         <h5>Perfis semanal e horário de emissões</h5>
                         <p>O resultado reúne as duas escalas temporais do inventário.</p>
                         <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfis semanal e horário de emissões">
@@ -516,7 +518,7 @@
                                 </button>
                                 <figcaption>Leia os valores e a unidade no eixo vertical do gráfico.</figcaption>
                             </figure>
-                            <figure class="doc-result" data-doc-image="imagens/documentacao-pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
+                            <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/perfis-temporais.png" data-doc-image-kind="combined" hidden>
                                 <h5>Perfis semanal e horário de emissões</h5>
                                 <p>O resultado reúne as duas escalas temporais do inventário.</p>
                                 <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Perfis semanal e horário de emissões">
@@ -566,7 +568,7 @@
                     <ol><li>Emissões totais agrupadas por poluente ou espécie química.</li><li>Emissões por fonte, coordenadas e poluente.</li><li>Emissões por célula WRF, com identificador, linha, coluna, centroide, poluente, médias horárias original e convertida, além da unidade.</li><li>Fracionamento por poluente ou espécie, com massa molar quando aplicável, emissão bruta total, média convertida, máximo convertido e unidade.</li></ol></details>
                     <details class="doc-report-results" hidden>
                         <summary>Ver exemplos de relatórios exportados</summary>
-                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-emissoes-poluente.png" data-doc-image-kind="optional" hidden>
+                        <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/relatorio-emissoes-poluente.png" data-doc-image-kind="optional" hidden>
                             <h5>Relatório de emissões por poluente</h5>
                             <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de emissões por poluente">
                                 <img alt="Relatório de emissões por poluente" decoding="async">
@@ -574,7 +576,7 @@
                             </button>
                             <figcaption>Confira o agrupamento e a unidade de massa no relatório.</figcaption>
                         </figure>
-                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-emissoes-usina.png" data-doc-image-kind="optional" hidden>
+                        <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/relatorio-emissoes-usina.png" data-doc-image-kind="optional" hidden>
                             <h5>Relatório de emissões por usina</h5>
                             <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de emissões por usina">
                                 <img alt="Relatório de emissões por usina" decoding="async">
@@ -582,7 +584,7 @@
                             </button>
                             <figcaption>Consulte os registros por fonte e poluente.</figcaption>
                         </figure>
-                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-grade-wrf.png" data-doc-image-kind="optional" hidden>
+                        <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/relatorio-grade-wrf.png" data-doc-image-kind="optional" hidden>
                             <h5>Relatório da grade WRF</h5>
                             <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório da grade WRF">
                                 <img alt="Relatório da grade WRF" decoding="async">
@@ -590,7 +592,7 @@
                             </button>
                             <figcaption>Use a linha e a coluna para localizar as células e confira a unidade das médias.</figcaption>
                         </figure>
-                        <figure class="doc-result" data-doc-image="imagens/documentacao-pega/relatorio-fracionamento.png" data-doc-image-kind="optional" hidden>
+                        <figure class="doc-result" data-doc-image-pending data-doc-image="imgs/documentacao.pega/relatorio-fracionamento.png" data-doc-image-kind="optional" hidden>
                             <h5>Relatório de fracionamento</h5>
                             <button type="button" class="doc-result-preview" hidden aria-label="Ampliar: Relatório de fracionamento">
                                 <img alt="Relatório de fracionamento" decoding="async">
@@ -965,6 +967,8 @@
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous" defer></script>
-<script src="pega.js" defer></script>
+<script src="i18n-pega.js"></script>
+<script src="language.js"></script>
+<script src="pega.js?v=20261127-2" defer></script>
 </body>
 </html>
