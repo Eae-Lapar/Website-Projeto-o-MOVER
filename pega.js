@@ -86,11 +86,15 @@ function initPegaDemoMap() {
     }
 
     const leaflet = window.L;
+    const { translate, onChange } = siteLanguage;
 
     if (!leaflet) {
 
-        status.textContent =
-            "Não foi possível carregar o mapa interativo.";
+        const showUnavailable = () => {
+            status.textContent = translate("Não foi possível carregar o mapa interativo.");
+        };
+        showUnavailable();
+        onChange(showUnavailable);
 
         return;
     }
@@ -113,7 +117,7 @@ function initPegaDemoMap() {
         "#f0f921"
     ];
 
-    const formatGrams = new Intl.NumberFormat("pt-BR", {
+    const gramsFormatter = () => new Intl.NumberFormat(siteLanguage.locale, {
         maximumFractionDigits: 0
     });
 
@@ -164,7 +168,7 @@ function initPegaDemoMap() {
         status.textContent = [
             mapMessage,
             dataMessage
-        ].filter(Boolean).join(" ");
+        ].filter(Boolean).map(translate).join(" ");
 
         status.hidden = !status.textContent;
     }
@@ -458,14 +462,14 @@ function initPegaDemoMap() {
 
         const information = [
 
-            "Combustível: Biomassa",
+            translate("Combustível: Biomassa"),
 
-            "Poluente: BC",
+            translate("Poluente: BC"),
 
-            "Emissão simulada: " +
-                formatGrams.format(record.grams) + " g",
+            translate("Emissão simulada:") + " " +
+                gramsFormatter().format(record.grams) + " g",
 
-            "Dado fictício demonstrativo"
+            translate("Dado fictício demonstrativo")
 
         ];
 
@@ -486,6 +490,28 @@ function initPegaDemoMap() {
     /* ==========================================
        RENDERIZAÇÃO DOS MARCADORES
     ========================================== */
+
+    let activePopup;
+
+    function translatePopupButton() {
+        const button = activePopup?.getElement()?.querySelector(".leaflet-popup-close-button");
+        button?.setAttribute("aria-label", translate("Fechar janela do mapa"));
+    }
+
+    map.on("popupopen", ({ popup }) => {
+        activePopup = popup;
+        translatePopupButton();
+    });
+
+    map.on("popupclose", () => {
+        activePopup = null;
+    });
+
+    onChange(() => {
+        updateStatus();
+        activePopup?.update();
+        translatePopupButton();
+    });
 
     function renderRecords(records) {
 
@@ -558,19 +584,14 @@ function initPegaDemoMap() {
 
             }
 
-            if (minLabel) {
-
-                minLabel.textContent =
-                    formatGrams.format(min);
-
+            function updateLegendLabels() {
+                const format = gramsFormatter();
+                if (minLabel) minLabel.textContent = format.format(min);
+                if (maxLabel) maxLabel.textContent = format.format(max);
             }
 
-            if (maxLabel) {
-
-                maxLabel.textContent =
-                    formatGrams.format(max);
-
-            }
+            updateLegendLabels();
+            onChange(updateLegendLabels);
 
             legend.hidden = false;
 
@@ -654,15 +675,13 @@ function initPegaDemoMap() {
 
     }
 
+    onChange(refreshFullscreen);
+
     function refreshFullscreen() {
 
         const expanded = isExpanded();
 
-        const label = expanded
-
-            ? "Sair da tela inteira"
-
-            : "Tela inteira";
+        const label = translate(expanded ? "Sair da tela inteira" : "Tela inteira");
 
         if (expandButton) {
 
@@ -857,8 +876,11 @@ function startPegaDemoMap() {
 
         if (mapStatus) {
 
-            mapStatus.textContent =
-                "Não foi possível inicializar o mapa demonstrativo.";
+            const showError = () => {
+                mapStatus.textContent = siteLanguage.translate("Não foi possível inicializar o mapa demonstrativo.");
+            };
+            showError();
+            siteLanguage.onChange(showError);
 
         }
 
@@ -1078,7 +1100,9 @@ if (document.readyState === "loading") {
             if (select) {
                 const option = document.createElement("option");
                 option.value = panel.id;
-                option.textContent = link.lastChild.textContent.trim();
+                const updateOption = () => { option.textContent = link.lastChild.textContent.trim(); };
+                updateOption();
+                siteLanguage.onChange(updateOption);
                 select.append(option);
             }
         });
@@ -1141,7 +1165,11 @@ if (document.readyState === "loading") {
 
     const loadedImages = new Map();
 
-    function loadResultImage(path) {
+    function loadResultImage(figure) {
+        // Keep unpublished image paths in the markup without requesting them.
+        if (figure.hasAttribute("data-doc-image-pending")) return Promise.resolve(false);
+
+        const path = figure.dataset.docImage;
         if (!loadedImages.has(path)) {
             loadedImages.set(path, new Promise((resolve) => {
                 const image = new Image();
@@ -1176,7 +1204,7 @@ if (document.readyState === "loading") {
     }
 
     function loadSingleResult(figure) {
-        return loadResultImage(figure.dataset.docImage).then((available) => {
+        return loadResultImage(figure).then((available) => {
             if (available) showResult(figure);
             return available;
         });
@@ -1184,7 +1212,7 @@ if (document.readyState === "loading") {
 
     docs.querySelectorAll("[data-doc-profile]").forEach(async (profile) => {
         const individual = [...profile.querySelectorAll('[data-doc-image-kind="individual"]')];
-        const available = await Promise.all(individual.map((figure) => loadResultImage(figure.dataset.docImage)));
+        const available = await Promise.all(individual.map(loadResultImage));
         if (!available.every(Boolean)) {
             const combined = profile.querySelector('[data-doc-image-kind="combined"]');
             if (await loadSingleResult(combined)) {
@@ -1203,25 +1231,45 @@ if (document.readyState === "loading") {
         if (await loadSingleResult(figure)) reports.hidden = false;
     });
 
+    const directoryTree = docs.querySelector(".doc-tree code");
+    const originalTree = directoryTree.textContent;
+
+    function updateDirectoryTree() {
+        const highlighted = directoryTree.hasAttribute("data-highlighted");
+        directoryTree.textContent = originalTree.replace(
+            /(# )([^\n]+)/g,
+            (_, prefix, comment) => prefix + siteLanguage.translate(comment)
+        );
+        if (highlighted && window.hljs) {
+            delete directoryTree.dataset.highlighted;
+            window.hljs.highlightElement(directoryTree);
+        }
+    }
+
+    updateDirectoryTree();
+    siteLanguage.onChange(updateDirectoryTree);
+
     const calculator = docs.querySelector(".doc-calculator");
     const fields = calculator.querySelector(".doc-inputs");
     const inputs = [...fields.querySelectorAll("input")];
     const output = calculator.querySelector("output");
-    const format = new Intl.NumberFormat("pt-BR", { maximumSignificantDigits: 10 });
 
     function updateEstimate() {
         const [activity, factor] = inputs.map((input) => input.valueAsNumber);
         const grams = activity * factor;
         if (inputs.some((input) => !input.validity.valid) || !Number.isFinite(grams)) {
-            output.value = "Informe valores não negativos com um resultado finito.";
+            output.value = siteLanguage.translate("Informe valores não negativos com um resultado finito.");
             return;
         }
 
+        const format = new Intl.NumberFormat(siteLanguage.locale, { maximumSignificantDigits: 10 });
         output.value = [[grams, "g"], [grams / 1000, "kg"], [grams / 1000000, "t"]]
             .map(([value, unit]) => format.format(value) + " " + unit)
             .join(" · ");
     }
 
+    updateEstimate();
+    siteLanguage.onChange(updateEstimate);
     fields.hidden = false;
     fields.addEventListener("input", updateEstimate);
 })();
